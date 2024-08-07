@@ -55,6 +55,7 @@ public class ItemInfinityArmor extends ItemArmor {
             player.setAir(300);
             player.getFoodStats().addStats(20, 20F);
             player.setScore(99566);
+            player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 10, 100)); // Night vision for better visualization. (?)
         }
         else if(armorType == 1){
             Collection effects = player.getActivePotionEffects();
