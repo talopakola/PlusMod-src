@@ -147,93 +147,94 @@ public class ItemInfinityArmor extends ItemArmor {
         public static String playerKey(EntityPlayer player) {
             return player.getGameProfile().getName() +":"+ player.worldObj.isRemote;
         }
-    }
 
-    @SubscribeEvent
-    public void updatePlayerAbilityStatus(LivingUpdateEvent event) {
-        if (event.entityLiving instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer)event.entityLiving;
-            String key = playerKey(player);
+        // I'm so stupid...
+        @SubscribeEvent
+        public void updatePlayerAbilityStatus(LivingUpdateEvent event) {
+            if (event.entityLiving instanceof EntityPlayer) {
+                EntityPlayer player = (EntityPlayer)event.entityLiving;
+                String key = playerKey(player);
 
-            // hat
-            Boolean hasHat = playerHasHat(player);
-            if (playersWithHat.contains(key)) {
-                if (hasHat) {
+                // hat
+                Boolean hasHat = playerHasHat(player);
+                if (playersWithHat.contains(key)) {
+                    if (hasHat) {
 
-                } else {
-                    playersWithHat.remove(key);
-                }
-            } else if (hasHat) {
-                playersWithHat.add(key);
-            }
-
-            // chest
-            Boolean hasChest = playerHasChest(player);
-            if (playersWithChest.contains(key)) {
-                if (hasChest) {
-                    player.capabilities.allowFlying = true;
-                } else {
-                    if (!player.capabilities.isCreativeMode) {
-                        player.capabilities.allowFlying = false;
-                        player.capabilities.isFlying = false;
+                    } else {
+                        playersWithHat.remove(key);
                     }
-                    playersWithChest.remove(key);
+                } else if (hasHat) {
+                    playersWithHat.add(key);
                 }
-            } else if (hasChest) {
-                playersWithChest.add(key);
-            }
 
-            // legs
-            Boolean hasLeg = playerHasLeg(player);
-            if (playersWithLeg.contains(key)) {
-                if (hasLeg) {
-
-                } else {
-                    playersWithLeg.remove(key);
-                }
-            } else if (hasLeg) {
-                playersWithLeg.add(key);
-            }
-
-            // shoes
-            Boolean hasFoot = playerHasFoot(player);
-            if (playersWithFoot.contains(key)) {
-                if (hasFoot) {
-                    boolean flying = player.capabilities.isFlying;
-                    boolean swimming = player.isInsideOfMaterial(Material.water) || player.isInWater();
-                    if (player.onGround || flying || swimming) {
-                        boolean sneaking = player.isSneaking();
-
-                        float speed = 0.15f
-                                * (flying ? 1.1f : 1.0f)
-                                * (sneaking ? 0.1f : 1.0f);
-
-                        if (player.moveForward > 0f) {
-                            player.moveFlying(0f, 1f, speed);
-                        } else if (player.moveForward < 0f) {
-                            player.moveFlying(0f, 1f, -speed * 0.3f);
+                // chest
+                Boolean hasChest = playerHasChest(player);
+                if (playersWithChest.contains(key)) {
+                    if (hasChest) {
+                        player.capabilities.allowFlying = true;
+                    } else {
+                        if (!player.capabilities.isCreativeMode) {
+                            player.capabilities.allowFlying = false;
+                            player.capabilities.isFlying = false;
                         }
-
-                        if (player.moveStrafing != 0f) {
-                            player.moveFlying(1f, 0f, speed * 0.5f * Math.signum(player.moveStrafing));
-                        }
+                        playersWithChest.remove(key);
                     }
-                } else {
-                    playersWithFoot.remove(key);
+                } else if (hasChest) {
+                    playersWithChest.add(key);
                 }
-            } else if (hasFoot) {
-                playersWithFoot.add(key);
+
+                // legs
+                Boolean hasLeg = playerHasLeg(player);
+                if (playersWithLeg.contains(key)) {
+                    if (hasLeg) {
+
+                    } else {
+                        playersWithLeg.remove(key);
+                    }
+                } else if (hasLeg) {
+                    playersWithLeg.add(key);
+                }
+
+                // shoes
+                Boolean hasFoot = playerHasFoot(player);
+                if (playersWithFoot.contains(key)) {
+                    if (hasFoot) {
+                        boolean flying = player.capabilities.isFlying;
+                        boolean swimming = player.isInsideOfMaterial(Material.water) || player.isInWater();
+                        if (player.onGround || flying || swimming) {
+                            boolean sneaking = player.isSneaking();
+
+                            float speed = 0.15f
+                                    * (flying ? 1.1f : 1.0f)
+                                    * (sneaking ? 0.1f : 1.0f);
+
+                            if (player.moveForward > 0f) {
+                                player.moveFlying(0f, 1f, speed);
+                            } else if (player.moveForward < 0f) {
+                                player.moveFlying(0f, 1f, -speed * 0.3f);
+                            }
+
+                            if (player.moveStrafing != 0f) {
+                                player.moveFlying(1f, 0f, speed * 0.5f * Math.signum(player.moveStrafing));
+                            }
+                        }
+                    } else {
+                        playersWithFoot.remove(key);
+                    }
+                } else if (hasFoot) {
+                    playersWithFoot.add(key);
+                }
             }
         }
-    }
-    @SubscribeEvent
-    public void jumpBoost(LivingJumpEvent event) {
-        if (event.entityLiving instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer)event.entityLiving;
-            String key = playerKey(player);
+        @SubscribeEvent
+        public void jumpBoost(LivingJumpEvent event) {
+            if (event.entityLiving instanceof EntityPlayer) {
+                EntityPlayer player = (EntityPlayer)event.entityLiving;
+                String key = playerKey(player);
 
-            if (playersWithFoot.contains(key)) {
-                player.motionY += 0.4f;
+                if (playersWithFoot.contains(key)) {
+                    player.motionY += 0.4f;
+                }
             }
         }
     }
