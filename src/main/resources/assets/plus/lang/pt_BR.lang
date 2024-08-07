@@ -1,0 +1,39 @@
+#Items
+item.itemTest.name=Plus Debug (no function)
+item.mixed_ingot.name=Barra Misturada
+item.star_ingot.name=Barra de Estrela
+item.star_core.name=Núcleo de Estrela
+item.reality_cristal.name=Cristal da realidade
+item.existence_ingot.name=Bara da existência
+item.infinity_sword.name=Deus dos Deuses
+item.infinity_pickaxe.name=Comedor de Realidades
+item.infinity_axe.name=O Medo de Mundos
+item.infinity_shovel.name=Destruídor de Planetas
+item.infinity_armor_0.name=Capacete do Infinito
+item.infinity_armor_1.name=Peitoral do Infinito
+item.infinity_armor_2.name=Calças do Infinito
+item.infinity_armor_3.name=Botas do Infinito
+#
+#Tiles
+tile.absolute_craft.name=Mesa de Trabalho Absoluta
+tile.mixed_block.name=Bloco Misturado
+tile.tile_star_core.name=Bloco de Núcleo de Estrela
+#
+#Tooltip
+tooltip.mixed.desc=Uma mistura de todos os materiais. Você sabe, pode ser poderoso
+tooltip.star.desc=Estrelas são uma mistura de materiais e ela mesma, mas você possuí uma cópia própria.
+tooltip.star_core.desc=É dia para um pouco de
+star.desc.color=CAOS
+tooltip.reality.desc=A realidade em suas mãos... Mas não está pronto ainda!
+lore.existence.desc="No início da existência, Deus criou poderosos materiais, para caso se corrompesse para o mal, poderiam trazer a paz a existência"
+tooltip.sword.desc=Criada para uma possível corrupção... Você escolhe, destruir tudo ou salvar tudo?
+tooltip.sanic.desc=VELOCIDADE SÔNICA
+#
+#JEI
+crafting.abs=Absolute Crafting Shaped
+#
+#Misc
+itemGroup.plus=Plus Mod
+enchantment.level.20=XX
+container.compressor=Compressor
+tip.infinity=INFINITO
