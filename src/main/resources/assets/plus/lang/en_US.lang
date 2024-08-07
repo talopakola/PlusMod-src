@@ -1,0 +1,39 @@
+#Items
+item.itemTest.name=Plus Debug (no function)
+item.mixed_ingot.name=Mixed Ingot
+item.star_ingot.name=Star Ingot
+item.star_core.name=Star Core
+item.reality_cristal.name=Reality Cristal
+item.existence_ingot.name=Existence Ingot
+item.infinity_sword.name=God of Gods
+item.infinity_pickaxe.name=Realities Eater
+item.infinity_axe.name=The Worlds Fear
+item.infinity_shovel.name=Planets Destroyer
+item.infinity_armor_0.name=Infinity Helmet
+item.infinity_armor_1.name=Infinity Chestplate
+item.infinity_armor_2.name=Infinity Leggings
+item.infinity_armor_3.name=Infinity Boots
+#
+#Tiles
+tile.absolute_craft.name=Absolute Crafting Table
+tile.mixed_block.name=Mixed Block
+tile.tile_star_core.name=Star Core Block
+#
+#Tooltip
+tooltip.mixed.desc=A mix of every materials. You know, it can be powerful...
+tooltip.star.desc=Star consists in a mix of materials and itself, but now you have your own copy.
+tooltip.star_core.desc=Is day for some
+star.desc.color=CHAOS
+tooltip.reality.desc=The reality, in your hand... But, it's not finished yet.
+lore.existence.desc="In the start of existence, God created powerful materials, because, if some day it corrupt by the evil, it will exist a form to kill him and bring peace to the existence."
+tooltip.sword.desc=Created to defense the peace from a possible corruption... You choose, destroy everything, or save everything?
+tooltip.sanic.desc=SONIC SPEED
+#
+#JEI
+crafting.abs=Absolute Crafting Shaped
+#
+#Misc
+itemGroup.plus=Plus Mod
+enchantment.level.20=XX
+container.compressor=Compressor
+tip.infinity=INFINITY

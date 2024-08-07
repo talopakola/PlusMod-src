@@ -1,0 +1,16 @@
+[
+{
+  "modid": "plus",
+  "name": "Plus Mod",
+  "description": "A parody Avaritia copy mod\nPlus, a mod to proof that nobody are happy even with the most powerful tools...",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Enzo"],
+  "credits": "SpitefulFox",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
