@@ -6,4 +6,4 @@
 5. Changed some animation stuff
 6. Correct Existence Ingot Sprite (I know, it was painful see the white squares)
 7. New Reality Block with a special function >:D
-8. INFINITY BOW
+8. INFINITY BOW YAY
