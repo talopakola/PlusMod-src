@@ -1,10 +1,13 @@
 package net.enzo.plus.common.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.item.tools.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
+import net.minecraft.potion.Potion;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
@@ -28,6 +31,8 @@ public class InfinityItems {
     public static Item infinity_leggings;
     public static Item infinity_boots;
 
+    public static Item infinity_apple;
+
     public static EnumRarity infinity = EnumHelper.addRarity("INFINITY", EnumChatFormatting.RED, "Infinity"); // Why the fuck exist a "display name"?
 
     public static void letsRegisterEmAll(){
@@ -37,6 +42,9 @@ public class InfinityItems {
         star_core = butSetItFirst(new ItemStarCore(), "star_core");
         realityCristal = butSetItFirst(new ItemRealityCristal(), "reality_cristal");
         existence = butSetItFirst(new ItemExistenceIngot(), "existence_ingot");
+
+        infinity_apple = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.regeneration.getId(), 100, 100, 1.0F).setAlwaysEdible().setTextureName("plus:infinity_apple").setCreativeTab(PlusMod.tab).setUnlocalizedName("infinity_apple"), "Infinity_Apple");
+
         infinity_sword = butSetItFirst(new ItemInfinitySword(), "infinity_sword");
         infinity_pickaxe = butSetItFirst(new ItemInfinityPickaxe(), "infinity_pickaxe");
         infinity_axe = butSetItFirst(new ItemInfinityAxe(), "infinity_axe");
