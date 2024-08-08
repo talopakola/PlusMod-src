@@ -1,4 +1,4 @@
-package net.enzo.plus.common.item.tools;
+package net.enzo.plus.common.item;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
@@ -7,7 +7,6 @@ import net.enzo.plus.PlusMod;
 import net.enzo.plus.client.ColorsText;
 import net.enzo.plus.common.PotionHelper;
 import net.enzo.plus.common.entities.EntityImmortalItem;
-import net.enzo.plus.common.item.InfinityItems;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,8 +23,6 @@ import net.minecraftforge.event.entity.living.LivingEvent.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
-import static net.enzo.plus.common.item.tools.ItemInfinityArmor.abilityHandler.*;
 
 public class ItemInfinityArmor extends ItemArmor {
     public static final ArmorMaterial infinite_armor = EnumHelper.addArmorMaterial("infinity", 9999, new int[]{6, 16, 12, 6}, 1000);
