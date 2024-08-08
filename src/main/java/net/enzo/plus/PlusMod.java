@@ -10,6 +10,7 @@ import net.enzo.plus.common.Config;
 import net.enzo.plus.common.PotionHelper;
 import net.enzo.plus.common.blocks.InfinityBlocks;
 import net.enzo.plus.common.compat.Compat;
+import net.enzo.plus.common.entities.InfinityEntitites;
 import net.enzo.plus.common.gui.GUIHandlerShit;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.misc.MakeTheThings;
@@ -42,6 +43,7 @@ public class PlusMod
         InfinityItems.letsRegisterEmAll();
         InfinityBlocks.consumeUniverse();
         Compat.compatible();
+        InfinityEntitites.consumeTheLive();
         proxy.before();
     }
 
