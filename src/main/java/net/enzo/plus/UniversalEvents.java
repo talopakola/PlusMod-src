@@ -4,15 +4,26 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.enzo.plus.client.ColorsText;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.item.tools.ItemInfinitySword;
+import net.enzo.plus.common.item.tools.ToolHelper;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+
+import java.util.Random;
 
 public class UniversalEvents {
+    private static Random randy = new Random();
+
     @SubscribeEvent // Is SubscribeEvent not EventHandler, dumbass
     public void onTooltip(ItemTooltipEvent event) {
         if (event.itemStack.getItem() instanceof ItemInfinitySword) {
@@ -35,6 +46,46 @@ public class UniversalEvents {
                 player.setHealth(player.getMaxHealth());
             }
         }
+    }
+
+    @SubscribeEvent
+    public void onPlayerMine(PlayerInteractEvent event) {
+        if(event.face == -1 || event.world.isRemote || event.action != PlayerInteractEvent.Action.LEFT_CLICK_BLOCK || event.entityPlayer.getHeldItem() == null || event.entityPlayer.capabilities.isCreativeMode)
+            return;
+        Block block = event.world.getBlock(event.x, event.y, event.z);
+        int meta = event.world.getBlockMetadata(event.x, event.y, event.z);
+        if(block.getBlockHardness(event.entityPlayer.worldObj, event.x, event.y, event.z) <= -1 &&
+                event.entityPlayer.getHeldItem().getItem() == InfinityItems.infinity_pickaxe &&
+                (block.getMaterial() == Material.rock || block.getMaterial() == Material.iron)){
+
+            if(event.entityPlayer.getHeldItem().getTagCompound() != null && event.entityPlayer.getHeldItem().getTagCompound().getBoolean("hammer")) {
+                InfinityItems.infinity_pickaxe.onBlockStartBreak(event.entityPlayer.getHeldItem(), event.x, event.y, event.z, event.entityPlayer); // I think I can delete this, but how I'm dumb, I'll let it here
+            }
+            else {
+
+                if(block.quantityDropped(randy) == 0) {
+                    ItemStack drop = block.getPickBlock(ToolHelper.raytraceFromEntity(event.world, event.entityPlayer, true, 10),
+                            event.world, event.x, event.y, event.z, event.entityPlayer);
+                    if(drop == null)
+                        drop = new ItemStack(block, 1, meta);
+                    dropItem(drop, event.entityPlayer.worldObj, event.x, event.y, event.z);
+                }
+                else
+                    block.harvestBlock(event.world, event.entityPlayer, event.x, event.y, event.z, meta);
+                event.entityPlayer.worldObj.setBlockToAir(event.x, event.y, event.z);
+                event.world.playAuxSFX(2001, event.x, event.y, event.z, Block.getIdFromBlock(block) + (meta << 12));
+            }
+        }
+    }
+
+    public static void dropItem(ItemStack drop, World world, int x, int y, int z){
+        float f = 0.7F;
+        double d0 = (double)(randy.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
+        double d1 = (double)(randy.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
+        double d2 = (double)(randy.nextFloat() * f) + (double)(1.0F - f) * 0.5D;
+        EntityItem entityitem = new EntityItem(world, (double)x + d0, (double)y + d1, (double)z + d2, drop);
+        entityitem.delayBeforeCanPickup = 10;
+        world.spawnEntityInWorld(entityitem);
     }
 
     @SubscribeEvent
