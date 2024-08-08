@@ -32,6 +32,7 @@ public class InfinityItems {
     public static Item infinity_boots;
 
     public static Item infinity_apple;
+    public static Item infinity_banana;
 
     public static EnumRarity infinity = EnumHelper.addRarity("INFINITY", EnumChatFormatting.RED, "Infinity"); // Why the fuck exist a "display name"?
 
@@ -44,6 +45,7 @@ public class InfinityItems {
         existence = butSetItFirst(new ItemExistenceIngot(), "existence_ingot");
 
         infinity_apple = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.regeneration.getId(), 100, 100, 1.0F).setAlwaysEdible().setTextureName("plus:infinity_apple").setCreativeTab(PlusMod.tab).setUnlocalizedName("infinity_apple"), "Infinity_Apple");
+        infinity_banana = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.damageBoost.getId(), 6969, 100, 1.0F).setUnlocalizedName("infinity_banana").setTextureName("plus:infinity_banana").setCreativeTab(PlusMod.tab), "Infinity_Banana"); // ... What I did????
 
         infinity_sword = butSetItFirst(new ItemInfinitySword(), "infinity_sword");
         infinity_pickaxe = butSetItFirst(new ItemInfinityPickaxe(), "infinity_pickaxe");
