@@ -7,6 +7,7 @@ public class InfinityBlocks {
     public static Block absolute;
     public static Block mixedBlock;
     public static Block star;
+    public static Block reality;
 
     public static void consumeUniverse() {
         absolute = GameRegistry.registerBlock(new BlockAbsoluteCraftingTable(), "absolute_craft");
@@ -14,5 +15,6 @@ public class InfinityBlocks {
         mixedBlock = GameRegistry.registerBlock(new BlockMixedBlock(), "mixed_block");
         //absolute = GameRegistry.registerBlock(new BlockStarCore(), "tile_star_core"); bruh
         star = GameRegistry.registerBlock(new BlockStarCore(), "tile_star_core");
+        reality = GameRegistry.registerBlock(new BlockReality(), "Block_Reality");
     }
 }

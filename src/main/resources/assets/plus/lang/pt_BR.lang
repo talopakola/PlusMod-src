@@ -20,6 +20,7 @@ item.infinity_banana.name=Banana do Infinito
 tile.absolute_craft.name=Mesa de Trabalho Absoluta
 tile.mixed_block.name=Bloco Misturado
 tile.tile_star_core.name=Bloco de Núcleo de Estrela
+tile.reality.name=Bloco de Realidade
 #
 #Tooltip
 tooltip.mixed.desc=Uma mistura de todos os materiais. Você sabe, pode ser poderoso

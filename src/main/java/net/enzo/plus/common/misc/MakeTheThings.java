@@ -14,6 +14,7 @@ public class MakeTheThings {
         GameRegistry.addShapedRecipe(new ItemStack(InfinityBlocks.absolute), "XXX", "XDX", "XXX", 'X', InfinityItems.mixed, 'D', Blocks.crafting_table);
         GameRegistry.addShapedRecipe(new ItemStack(InfinityBlocks.mixedBlock), "XXX","XXX","XXX", 'X', InfinityItems.mixed);
         GameRegistry.addShapedRecipe(new ItemStack(InfinityBlocks.star), "XXX", "XXX", "XXX", 'X', InfinityItems.star_core);
+        GameRegistry.addShapedRecipe(new ItemStack(InfinityBlocks.reality), "XXX", "XXX", "XXX", 'X', InfinityItems.realityCristal);
 
         //AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityBlocks.absolute), "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", 'X', new ItemStack(InfinityItems.mixed)); // Test
         //AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.star), "XXXXXXXXX", "XNNNNNNNX", "XNNMMMNNX", "XNNMMMNNX", "XNNMMMNNX", "XSESESESX", /*SEX*/"XNNSSSNNX", "XXXSSSXXX", "XXXXXXXXX", 'X', InfinityItems.mixed, 'N', Items.nether_star, 'M', Items.iron_ingot, 'S', Blocks.stone, 'E', Blocks.end_stone);
