@@ -7,6 +7,7 @@ import codechicken.nei.recipe.RecipeInfo;
 import codechicken.nei.recipe.ShapedRecipeHandler;
 import net.enzo.plus.common.crafting.AbsoluteCraftingManager;
 import net.enzo.plus.common.crafting.AbsoluteCraftingShaped;
+import net.enzo.plus.common.crafting.AbsoluteCraftingShapedOre;
 import net.enzo.plus.common.gui.GUIAbsoluteCraftingTable;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
@@ -104,6 +105,8 @@ public class AbsoluteShapedRecipeHandler extends ShapedRecipeHandler {
                 CachedExtremeRecipe recipe = null;
                 if (irecipe instanceof AbsoluteCraftingShaped)
                     recipe = new CachedExtremeRecipe((AbsoluteCraftingShaped) irecipe);
+                else if (irecipe instanceof AbsoluteCraftingShapedOre)
+                    recipe = forgeExtremeShapedRecipe((AbsoluteCraftingShapedOre) irecipe);
 
                 if (recipe == null)
                     continue;
@@ -123,6 +126,8 @@ public class AbsoluteShapedRecipeHandler extends ShapedRecipeHandler {
                 CachedExtremeRecipe recipe = null;
                 if (irecipe instanceof AbsoluteCraftingShaped)
                     recipe = new CachedExtremeRecipe((AbsoluteCraftingShaped) irecipe);
+                else if (irecipe instanceof AbsoluteCraftingShapedOre)
+                    recipe = forgeExtremeShapedRecipe((AbsoluteCraftingShapedOre) irecipe);
 
                 if (recipe == null)
                     continue;
@@ -139,6 +144,8 @@ public class AbsoluteShapedRecipeHandler extends ShapedRecipeHandler {
             CachedExtremeRecipe recipe = null;
             if (irecipe instanceof AbsoluteCraftingShaped)
                 recipe = new CachedExtremeRecipe((AbsoluteCraftingShaped) irecipe);
+            else if (irecipe instanceof AbsoluteCraftingShapedOre)
+                recipe = forgeExtremeShapedRecipe((AbsoluteCraftingShapedOre) irecipe);
 
             if (recipe == null || !recipe.contains(recipe.ingredients, ingredient.getItem()))
                 continue;
@@ -149,6 +156,18 @@ public class AbsoluteShapedRecipeHandler extends ShapedRecipeHandler {
                 arecipes.add(recipe);
             }
         }
+    }
+
+    public CachedExtremeRecipe forgeExtremeShapedRecipe(AbsoluteCraftingShapedOre recipe) {
+        int width = recipe.width;
+        int height = recipe.height;
+
+        Object[] items = recipe.getInput();
+        for (Object item : items)
+            if (item instanceof List && ((List<?>) item).isEmpty())//ore handler, no ores
+                return null;
+
+        return new CachedExtremeRecipe(width, height, items, recipe.getRecipeOutput());
     }
 
     @Override

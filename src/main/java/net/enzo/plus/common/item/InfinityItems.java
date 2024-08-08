@@ -2,6 +2,7 @@ package net.enzo.plus.common.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.enzo.plus.PlusMod;
+import net.enzo.plus.common.Config;
 import net.enzo.plus.common.item.tools.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -44,6 +45,8 @@ public class InfinityItems {
         star_core = butSetItFirst(new ItemStarCore(), "star_core");
         realityCristal = butSetItFirst(new ItemRealityCristal(), "reality_cristal");
         existence = butSetItFirst(new ItemExistenceIngot(), "existence_ingot");
+        if (Config.craftOnly)
+            return;
 
         infinity_apple = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.regeneration.getId(), 100, 100, 1.0F).setAlwaysEdible().setTextureName("plus:infinity_apple").setCreativeTab(PlusMod.tab).setUnlocalizedName("infinity_apple"), "Infinity_Apple");
         infinity_banana = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.damageBoost.getId(), 6969, 100, 1.0F).setUnlocalizedName("infinity_banana").setTextureName("plus:infinity_banana").setCreativeTab(PlusMod.tab), "Infinity_Banana"); // ... What I did????

@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class AbsoluteCraftingManager {
     private static final AbsoluteCraftingManager instance = new AbsoluteCraftingManager();
@@ -75,6 +76,12 @@ public class AbsoluteCraftingManager {
         return shapedrecipes;
     }
 
+    public AbsoluteCraftingShapedOre addExtremeShapedOreRecipe(ItemStack result, Object... recipe){
+        AbsoluteCraftingShapedOre craft = new AbsoluteCraftingShapedOre(result, recipe);
+        recipes.add(craft);
+        return craft;
+    }
+
     public AbsoluteCraftingShapeless addShapelessRecipe(ItemStack result, Object... ingredients) {
         ArrayList arraylist = new ArrayList();
         Object[] aobject = ingredients;
@@ -97,6 +104,12 @@ public class AbsoluteCraftingManager {
 
         AbsoluteCraftingShapeless recipe = new AbsoluteCraftingShapeless(result, arraylist);
         this.recipes.add(recipe);
+        return recipe;
+    }
+
+    public ShapelessOreRecipe addShapelessOreRecipe(ItemStack result, Object ... ingredients){
+        ShapelessOreRecipe recipe = new ShapelessOreRecipe(result, ingredients);
+        recipes.add(recipe);
         return recipe;
     }
 

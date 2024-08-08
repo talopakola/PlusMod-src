@@ -7,3 +7,5 @@
 6. Correct Existence Ingot Sprite (I know, it was painful see the white squares)
 7. New Reality Block with a special function >:D
 8. INFINITY BOW YAY
+9. MineTweaker Support
+10. Crafting Only config
