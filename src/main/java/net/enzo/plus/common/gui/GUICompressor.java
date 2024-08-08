@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
 //AbsoluteCraftingTable
-public class GUICompressor extends GuiContainer {
+/*public class GUICompressor extends GuiContainer {
     private static final ResourceLocation tex = new ResourceLocation("plus:textures/gui/abs_crafting_gui.png");
 
     public GUICompressor(InventoryPlayer par1InventoryPlayer, World par2World, int x, int y, int z, TileAbsoluteCraftingTable table)
@@ -34,4 +34,4 @@ public class GUICompressor extends GuiContainer {
         int bar = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(foo, bar, 0, 0, this.ySize, this.ySize);
     }
-}
+}*/
