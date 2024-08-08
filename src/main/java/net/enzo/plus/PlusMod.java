@@ -1,6 +1,7 @@
 package net.enzo.plus;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
@@ -13,7 +14,6 @@ import net.enzo.plus.common.gui.GUIHandlerShit;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.misc.MakeTheThings;
 import net.enzo.plus.common.proxy.CommonProxy;
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +24,7 @@ public class PlusMod
     @SidedProxy(serverSide = Static.COMMON, clientSide = Static.CLIENT)
     public static CommonProxy proxy;
 
-    @Mod.Instance
+    @Instance
     public static PlusMod instance;
 
     public static CreativeTabs tab = new CreativeTabs("plus") {
