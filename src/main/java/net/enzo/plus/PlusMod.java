@@ -5,6 +5,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.enzo.plus.common.Config;
 import net.enzo.plus.common.PotionHelper;
 import net.enzo.plus.common.blocks.InfinityBlocks;
 import net.enzo.plus.common.compat.Compat;
@@ -37,6 +38,7 @@ public class PlusMod
     public void earlyNightmare(FMLPreInitializationEvent event)
     {
         instance = this;
+        Config.letsConfigurate(event.getSuggestedConfigurationFile());
         InfinityItems.letsRegisterEmAll();
         InfinityBlocks.consumeUniverse();
         Compat.compatible();

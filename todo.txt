@@ -8,4 +8,4 @@ todo:
         Axe: F
         Pickaxe: F
         Shovel: F
-    Config: F
+    Config: T

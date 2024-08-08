@@ -5,6 +5,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.common.Config;
 import net.enzo.plus.common.PotionHelper;
 import net.enzo.plus.common.entities.EntityImmortalItem;
 import net.minecraft.block.material.Material;
@@ -194,7 +195,7 @@ public class ItemInfinityArmor extends ItemArmor {
                 }
 
                 // shoes
-                Boolean hasFoot = playerHasFoot(player);
+                Boolean hasFoot = playerHasFoot(player) && Config.gottaGoFast;
                 if (playersWithFoot.contains(key)) {
                     if (hasFoot) {
                         boolean flying = player.capabilities.isFlying;
