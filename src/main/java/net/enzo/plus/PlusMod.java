@@ -6,6 +6,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.enzo.plus.client.render.ItemInfinityChestRenderItem;
 import net.enzo.plus.common.Config;
 import net.enzo.plus.common.PotionHelper;
 import net.enzo.plus.common.blocks.InfinityBlocks;
@@ -15,8 +16,11 @@ import net.enzo.plus.common.gui.GUIHandlerShit;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.misc.MakeTheThings;
 import net.enzo.plus.common.proxy.CommonProxy;
+import net.enzo.plus.common.tiles.TileInfinityChest;
+import net.enzo.plus.common.tiles.TileInfinityChestRenderer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = Static.MODID, version = Static.VERSION)
@@ -50,6 +54,8 @@ public class PlusMod
     @EventHandler
     public void midNightmare(FMLInitializationEvent event)
     {
+        TileInfinityChestRenderer render1 = new TileInfinityChestRenderer();
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(InfinityBlocks.coke), new ItemInfinityChestRenderItem(render1, new TileInfinityChest()));
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandlerShit());
         MakeTheThings.makeAll();
         MinecraftForge.EVENT_BUS.register(new UniversalEvents());
