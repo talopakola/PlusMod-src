@@ -8,9 +8,11 @@ public class InfinityBlocks {
     public static Block mixedBlock;
     public static Block star;
     public static Block reality;
+    public static Block coke;
 
     public static void consumeUniverse() {
         absolute = GameRegistry.registerBlock(new BlockAbsoluteCraftingTable(), "absolute_craft");
+        //coke = GameRegistry.registerBlock(new BlockInfintiyChest(), "Infinity_Chest");
 
         mixedBlock = GameRegistry.registerBlock(new BlockMixedBlock(), "mixed_block");
         //absolute = GameRegistry.registerBlock(new BlockStarCore(), "tile_star_core"); bruh
