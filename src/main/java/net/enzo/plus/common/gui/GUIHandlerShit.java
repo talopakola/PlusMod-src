@@ -1,7 +1,7 @@
 package net.enzo.plus.common.gui;
 
 import cpw.mods.fml.common.network.IGuiHandler;
-import net.enzo.plus.client.container.ContainerInfinityChest;
+import net.enzo.plus.client.container.GUIInfinityChest;
 import net.enzo.plus.common.tiles.TileAbsoluteCraftingTable;
 import net.enzo.plus.common.tiles.TileInfinityChest;
 import net.minecraft.entity.player.EntityPlayer;

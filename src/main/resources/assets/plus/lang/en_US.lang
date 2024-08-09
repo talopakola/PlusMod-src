@@ -22,6 +22,7 @@ tile.absolute_craft.name=Absolute Crafting Table
 tile.mixed_block.name=Mixed Block
 tile.tile_star_core.name=Star Core Block
 tile.reality.name=Reality Block
+tile.infinity_chest.name=Infinity Chest
 #
 #Tooltip
 tooltip.mixed.desc=A mix of every materials. You know, it can be powerful...

@@ -13,6 +13,7 @@ public class ModelInfinityChest extends ModelBase {
 	private final ModelRenderer top;
 	private final ModelRenderer holder;
 
+	@Deprecated
 	public ModelInfinityChest() {
 		textureWidth = 64;
 		textureHeight = 64;

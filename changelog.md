@@ -9,3 +9,5 @@
 8. INFINITY BOW YAY
 9. MineTweaker Support
 10. "Crafting Only" config
+11. Infinity Chest (No infinity storage yet, I'll work on this)
+12. Fixed issue with Absolute Crafting Table not saving after leave game
