@@ -8,4 +8,4 @@
 7. New Reality Block with a special function >:D
 8. INFINITY BOW YAY
 9. MineTweaker Support
-10. Crafting Only config
+10. "Crafting Only" config
