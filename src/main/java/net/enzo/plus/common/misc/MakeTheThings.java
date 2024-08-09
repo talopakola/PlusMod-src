@@ -32,5 +32,6 @@ public class MakeTheThings {
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_helmet), " EEEEEEE ", " EDDDDDE ", " ECCDCCE ", " EDDDDDE ", " EDDDDDE ", " ESSDSSE ", " E     E ", "         ", "         ", 'E', InfinityItems.existence, 'C', InfinityItems.realityCristal, 'D', InfinityItems.star_core, 'S', InfinityItems.star);
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_apple), "EEEEEEEEE", "EEEEEEEEE", "EEEEEEEEE", "EEEAAAEEE", "EEEAAAEEE", "EEEAAAEEE", "EEEEEEEEE", "EEEEEEEEE", "EEEEEEEEE", 'E', InfinityItems.star, 'A', new ItemStack(Items.golden_apple, 1, 1));
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_bow), "    SL   ", "   S L   ", "  D  L   ", " D   L   ", "C    B   ", " D   L   ", "  D  L   ", "   S L   ", "    SL   ", 'S', InfinityItems.existence, 'L', Blocks.wool, 'C', InfinityItems.realityCristal, 'D', InfinityItems.star_core, 'B', InfinityBlocks.star);
+        AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityBlocks.coke), "OOOOOOOOO","OOOOOOOOO","OOOOOOOOO","OOXXXXXOO","OOXXXXXOO","OOXXXXXOO","OOOOOOOOO","OOOOOOOOO","OOOOOOOOO", 'O', InfinityItems.realityCristal, 'X', Blocks.chest);
     }
 }
