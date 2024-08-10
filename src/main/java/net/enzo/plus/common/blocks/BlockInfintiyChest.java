@@ -5,6 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.tiles.TileAbsoluteCraftingTable;
 import net.enzo.plus.common.tiles.TileInfinityChest;
+import net.enzo.plus.common.tiles.TileInfinityChestRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.BlockContainer;
@@ -38,10 +39,11 @@ public class BlockInfintiyChest extends BlockContainer {
     public final int field_149956_a;
     private final Random field_149955_b = new Random();
     public static int p_i45397_1_;
+    public static final BlockInfintiyChest instance = new BlockInfintiyChest();
     protected BlockInfintiyChest() {
         super(Material.iron);
         setBlockName("infinity_chest");
-        setBlockTextureName("plus:infinity_chest"); // Lol
+        //setBlockTextureName("plus:infinity_chest_work"); // Lol
         setCreativeTab(PlusMod.tab);
         setHardness(100F);
         setHarvestLevel("pickaxe", 2);
@@ -56,6 +58,7 @@ public class BlockInfintiyChest extends BlockContainer {
     // I'll say that have a black hole on it, when you leave, it will send your items to IDK where
     // WHY THE ICON IS A NORMAL CHEST?
     // THE MOD CRASH IF A NORMAL CHEST IS SIDE BY SIDE WITH INFINITY CHEST LMAO
+    // WHY THE ICON NOW IS THE TEXTURE?
 
     @Override
     public boolean isOpaqueCube() {
@@ -66,10 +69,11 @@ public class BlockInfintiyChest extends BlockContainer {
     {
         return false;
     }
+
     @Override
     public int getRenderType()
     {
-        return 22;
+        return -1;
     }
     @Override
     public void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_) {
@@ -512,14 +516,10 @@ public class BlockInfintiyChest extends BlockContainer {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void registerBlockIcons(IIconRegister ir) {
-        super.registerBlockIcons(ir);
-
-        ir.registerIcon("plus:infinity_chest_icon");
+    public void registerBlockIcons(final IIconRegister iIconRegister)
+    {
+        this.blockIcon = iIconRegister.registerIcon("plus:infinity_chest_icon");
     }
 
-    @Override
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
-        return infinity;
-    }
+
 }

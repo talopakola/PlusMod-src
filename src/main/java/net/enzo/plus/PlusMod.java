@@ -1,18 +1,19 @@
 package net.enzo.plus;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import net.enzo.plus.client.render.ItemInfinityChestRenderItem;
+import net.enzo.plus.client.render.InfinityChestRenderItem;
 import net.enzo.plus.common.Config;
 import net.enzo.plus.common.PotionHelper;
+import net.enzo.plus.common.blocks.BlockInfintiyChest;
 import net.enzo.plus.common.blocks.InfinityBlocks;
 import net.enzo.plus.common.compat.Compat;
 import net.enzo.plus.common.entities.InfinityEntitites;
-import net.enzo.plus.common.gui.GUIHandlerShit;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.misc.MakeTheThings;
 import net.enzo.plus.common.proxy.CommonProxy;
@@ -43,6 +44,10 @@ public class PlusMod
     public void earlyNightmare(FMLPreInitializationEvent event)
     {
         instance = this;
+
+        ClientRegistry.bindTileEntitySpecialRenderer(TileInfinityChest.class, new TileInfinityChestRenderer());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockInfintiyChest.instance), new InfinityChestRenderItem());
+
         Config.letsConfigurate(event.getSuggestedConfigurationFile());
         InfinityItems.letsRegisterEmAll();
         InfinityBlocks.consumeUniverse();
@@ -54,8 +59,8 @@ public class PlusMod
     @EventHandler
     public void midNightmare(FMLInitializationEvent event)
     {
-        TileInfinityChestRenderer render1 = new TileInfinityChestRenderer();
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(InfinityBlocks.coke), new ItemInfinityChestRenderItem(render1, new TileInfinityChest()));
+        /*TileInfinityChestRenderer render1 = new TileInfinityChestRenderer();
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(InfinityBlocks.coke), new ItemInfinityChestRenderItem(render1, new TileInfinityChest()));*/
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandlerShit());
         MakeTheThings.makeAll();
         MinecraftForge.EVENT_BUS.register(new UniversalEvents());

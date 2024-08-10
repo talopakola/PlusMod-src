@@ -22,14 +22,12 @@ import static org.lwjgl.opengl.GL12.*;
 
 @SideOnly(Side.CLIENT)
 public class TileInfinityChestRenderer extends TileEntitySpecialRenderer {
+    public static final TileInfinityChestRenderer instance = new TileInfinityChestRenderer();
     ModelChest model = new ModelChest();
     private ResourceLocation chestTexture = new ResourceLocation("plus:textures/blocks/infinity_chest_work.png");
 
     @SuppressWarnings("unused")
     private RenderBlocks renderBlocks;
-    private RenderItem itemRenderer;
-
-    private Random random;
 
     public TileInfinityChestRenderer() {
         this.model = new ModelChest();
