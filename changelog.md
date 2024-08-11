@@ -5,7 +5,6 @@
 4. Config for disable 100 looting, if have lag
 5. Avaritia Compat
 6. Config for Avaritia Compat
-7. ***WITHERZILA INFINITY SWORD IMMUNE LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOL***
 
 # ATTENTION
 **"1.2" was a minor update ok?**
