@@ -3,6 +3,8 @@
 2. Config for Storage Drawers compat
 3. 100 Looting enchantment for Infinity Sword (Re-craft for effect)
 4. Config for disable 100 looting, if have lag
+5. Avaritia Compat
+6. Config for Avaritia Compat
 5. ***WITHERZILA INFINITY SWORD IMMUNE LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOL***
 
 # 1.1
