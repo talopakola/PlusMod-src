@@ -3,10 +3,14 @@ package net.enzo.plus.common.item;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.Config;
+import net.enzo.plus.common.blocks.BlockInfintiyChest;
 import net.enzo.plus.common.item.tools.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.EnumChatFormatting;
@@ -49,7 +53,7 @@ public class InfinityItems {
             return;
 
         infinity_apple = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.regeneration.getId(), 100, 100, 1.0F).setAlwaysEdible().setTextureName("plus:infinity_apple").setCreativeTab(PlusMod.tab).setUnlocalizedName("infinity_apple"), "Infinity_Apple");
-        infinity_banana = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.damageBoost.getId(), 6969, 100, 1.0F).setUnlocalizedName("infinity_banana").setTextureName("plus:infinity_banana").setCreativeTab(PlusMod.tab), "Infinity_Banana"); // ... What I did????
+        infinity_banana = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.damageBoost.getId(), 6969, 100, 1.0F).setAlwaysEdible().setUnlocalizedName("infinity_banana").setTextureName("plus:infinity_banana").setCreativeTab(PlusMod.tab), "Infinity_Banana"); // ... What I did????
 
         infinity_sword = butSetItFirst(new ItemInfinitySword(), "infinity_sword");
         infinity_pickaxe = butSetItFirst(new ItemInfinityPickaxe(), "infinity_pickaxe");

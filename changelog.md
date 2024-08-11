@@ -1,3 +1,10 @@
+# 1.2
+1. Storage Drawers compat
+2. Config for Storage Drawers compat
+3. 100 Looting enchantment for Infinity Sword (Re-craft for effect)
+4. Config for disable 100 looting, if have lag
+5. ***WITHERZILA INFINITY SWORD IMMUNE LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOL***
+
 # 1.1
 1. Infinity Pickaxe now break bedrock
 2. Update GUI and NEI GUI of Absolute Crafting Table for look more "original"

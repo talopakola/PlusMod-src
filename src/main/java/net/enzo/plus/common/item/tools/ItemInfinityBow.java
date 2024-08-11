@@ -4,6 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.entities.EntityHellArrow;
+import net.enzo.plus.common.item.InfinityItems;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -11,6 +12,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -45,15 +47,7 @@ public class ItemInfinityBow extends Item {
         float maxf = (float)max;
         int j = max - useCount;
 
-        /*ArrowLooseEvent event = new ArrowLooseEvent(player, stack, j);
-        MinecraftForge.EVENT_BUS.post(event);
-        if (event.isCanceled())
-        {
-            return;
-        }
-        j = event.charge;*/
-
-        boolean flag = true;//player.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, stack) > 0;
+        boolean flag = true;
 
         if (flag || player.inventory.hasItem(Items.arrow))
         {
@@ -206,5 +200,14 @@ public class ItemInfinityBow extends Item {
         return true;
     }
 
+    @Override
+    public EnumRarity getRarity(ItemStack p_77613_1_) {
+        return InfinityItems.infinity;
+    }
 
+    /*@Override
+    public String getUnlocalizedName() {
+        return ColorsText.rainbow(StatCollector.translateToLocal("item.infinity_bow.name")); // I need stop to use this on every item I like
+    } It not combine with the name
+    */
 }

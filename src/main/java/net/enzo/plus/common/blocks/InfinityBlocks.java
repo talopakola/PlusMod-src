@@ -11,12 +11,17 @@ public class InfinityBlocks {
     public static Block star;
     public static Block reality;
     public static Block coke;
+    public static Block comp;
 
     public static void consumeUniverse() {
         absolute = GameRegistry.registerBlock(new BlockAbsoluteCraftingTable(), "absolute_craft");
         coke = GameRegistry.registerBlock(new BlockInfintiyChest(), "Infinity_Chest");
+        //comp = GameRegistry.registerBlock(new BlockCompressor(), "Plus_Compressor");
+        // I gave up to try to do this, it simply crashes independent what I do.
+        // I'm almost making a pact with the devil just to make this SHIT works
         GameRegistry.registerTileEntity(TileAbsoluteCraftingTable.class, "Plus_Absolute_Crafting");
         GameRegistry.registerTileEntity(TileInfinityChest.class, "Plus_Tile_Entity");
+        //GameRegistry.registerTileEntity(TileCompressor.class, "Tile_Compressor_Entity");
         /*7377577274 bugs solved just registering the tile entities...
         * WHY I'M SO STUPID, WHY GOD, ANSWER ME, I SWEAR, WHY I'M SO FUCKING DUMB?????
         * */

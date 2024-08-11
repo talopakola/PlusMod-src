@@ -15,9 +15,12 @@ public class MakeTheThings {
         GameRegistry.addShapedRecipe(new ItemStack(InfinityBlocks.mixedBlock), "XXX","XXX","XXX", 'X', InfinityItems.mixed);
         GameRegistry.addShapedRecipe(new ItemStack(InfinityBlocks.star), "XXX", "XXX", "XXX", 'X', InfinityItems.star_core);
         GameRegistry.addShapedRecipe(new ItemStack(InfinityBlocks.reality), "XXX", "XXX", "XXX", 'X', InfinityItems.realityCristal);
-
+        /*System.out.println(CompressorManager.getRecipes());
+        CompressorManager.addRecipe(new ItemStack(Items.golden_apple, 1, 1), new ItemStack(Items.golden_apple, 1, 0));
+        System.out.println(CompressorManager.getRecipes());*/
         //AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityBlocks.absolute), "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", "XXXXXXXXX", 'X', new ItemStack(InfinityItems.mixed)); // Test
         //AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.star), "XXXXXXXXX", "XNNNNNNNX", "XNNMMMNNX", "XNNMMMNNX", "XNNMMMNNX", "XSESESESX", /*SEX*/"XNNSSSNNX", "XXXSSSXXX", "XXXXXXXXX", 'X', InfinityItems.mixed, 'N', Items.nether_star, 'M', Items.iron_ingot, 'S', Blocks.stone, 'E', Blocks.end_stone);
+        System.out.println(AbsoluteCraftingManager.getInstance().getRecipeList());
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.star), "XXXXXXXXX", "XNNNNNNNX", "XNNMMMNNX", "XNNMMMNNX", "XNNMMMNNX", "XESESESEX", /*SEX*/"XNNSSSNNX", "XXXSSSXXX", "XXXXXXXXX", 'X', InfinityItems.mixed, 'N', Items.nether_star, 'M', Items.iron_ingot, 'S', Blocks.stone, 'E', Blocks.end_stone);
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.star_core), "TTTXXXTTT", "TTTXXXTTT", "TTTXXXTTT", "TTTXXXTTT", "TTTXXXTTT", "TTTXXXTTT", "TTTXXXTTT", "TTTXXXTTT", "TTTXXXTTT", 'T', Blocks.tnt, 'X', InfinityItems.star);
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.realityCristal), "   CC    ", "  CMMC   ", "  CNSC   ", "  CEDC   ", "  CMMC   ", "  CNSC   ", "  CEDC   ", "  CMMC   ", "   CC    ", 'C', InfinityItems.star_core, 'M', InfinityItems.mixed, 'E', Blocks.end_stone, 'S', InfinityItems.star, 'N', Items.nether_star, 'D', InfinityBlocks.mixedBlock);
@@ -33,5 +36,6 @@ public class MakeTheThings {
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_apple), "EEEEEEEEE", "EEEEEEEEE", "EEEEEEEEE", "EEEAAAEEE", "EEEAAAEEE", "EEEAAAEEE", "EEEEEEEEE", "EEEEEEEEE", "EEEEEEEEE", 'E', InfinityItems.star, 'A', new ItemStack(Items.golden_apple, 1, 1));
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_bow), "    SL   ", "   S L   ", "  D  L   ", " D   L   ", "C    B   ", " D   L   ", "  D  L   ", "   S L   ", "    SL   ", 'S', InfinityItems.existence, 'L', Blocks.wool, 'C', InfinityItems.realityCristal, 'D', InfinityItems.star_core, 'B', InfinityBlocks.star);
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityBlocks.coke), "OOOOOOOOO","OOOOOOOOO","OOOOOOOOO","OOXXXXXOO","OOXXXXXOO","OOXXXXXOO","OOOOOOOOO","OOOOOOOOO","OOOOOOOOO", 'O', InfinityItems.realityCristal, 'X', Blocks.chest);
+        System.out.println(AbsoluteCraftingManager.getInstance().getRecipeList());
     }
 }

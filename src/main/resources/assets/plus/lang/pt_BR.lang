@@ -40,5 +40,11 @@ crafting.abs=Absolute Crafting Shaped
 #Misc
 itemGroup.plus=Plus Mod
 enchantment.level.20=XX
+enchantment.level.100=C
 container.compressor=Compressor
 tip.infinity=INFINITO
+options.difficulty.peaceful=Disastre
+options.difficulty.easy=Fraco
+options.difficulty.normal=Desista
+options.difficulty.hard=Inferno
+options.difficulty.hardcore=INFERNO DOS INFERNOS

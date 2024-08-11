@@ -37,6 +37,8 @@ public class ItemInfinityArmor extends ItemArmor {
         // IDK bro, I just do it
     }
 
+    public static EntityPlayer player;
+
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
         if (slot == 2) {

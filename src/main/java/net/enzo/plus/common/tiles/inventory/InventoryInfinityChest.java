@@ -1,5 +1,6 @@
 package net.enzo.plus.common.tiles.inventory;
 
+import net.enzo.plus.common.Config;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -48,7 +49,7 @@ public class InventoryInfinityChest implements IInventory {
 
     @Override
     public int getInventoryStackLimit() {
-        return Integer.MAX_VALUE;
+        return !Config.boringChest ? Integer.MAX_VALUE : 64;
     }
 
     @Override

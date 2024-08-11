@@ -3,6 +3,7 @@ package net.enzo.plus.common.blocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.enzo.plus.PlusMod;
+import net.enzo.plus.common.item.ItemInfinityChest;
 import net.enzo.plus.common.tiles.TileAbsoluteCraftingTable;
 import net.enzo.plus.common.tiles.TileInfinityChest;
 import net.enzo.plus.common.tiles.TileInfinityChestRenderer;
@@ -19,6 +20,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryLargeChest;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -40,7 +42,7 @@ public class BlockInfintiyChest extends BlockContainer {
     private final Random field_149955_b = new Random();
     public static int p_i45397_1_;
     public static final BlockInfintiyChest instance = new BlockInfintiyChest();
-    protected BlockInfintiyChest() {
+    public BlockInfintiyChest() {
         super(Material.iron);
         setBlockName("infinity_chest");
         //setBlockTextureName("plus:infinity_chest_work"); // Lol
@@ -54,11 +56,7 @@ public class BlockInfintiyChest extends BlockContainer {
     // I will call this a feature
     // I'll say "It's infinity chest, an end-game chest, powerful and IDK, so it doesn't follow the rules, it is the rules."!
     // All this cuz I'm too lazy to try to fix it
-    // WHY THE FUCK IT ISN'T SAVING THE ITEMS?????????????
-    // I'll say that have a black hole on it, when you leave, it will send your items to IDK where
     // WHY THE ICON IS A NORMAL CHEST?
-    // THE MOD CRASH IF A NORMAL CHEST IS SIDE BY SIDE WITH INFINITY CHEST LMAO
-    // WHY THE ICON NOW IS THE TEXTURE?
 
     @Override
     public boolean isOpaqueCube() {
@@ -73,7 +71,7 @@ public class BlockInfintiyChest extends BlockContainer {
     @Override
     public int getRenderType()
     {
-        return -1;
+        return 22;
     }
     @Override
     public void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_) {
@@ -124,13 +122,9 @@ public class BlockInfintiyChest extends BlockContainer {
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
         if (world.isRemote) {
             return true;
-        } else /*if (world.getBlock(x, y+1, z).isAir(world, x, y+1, z))*/ {
+        } else {
             player.openGui(PlusMod.instance, 1, world, x, y, z);
             return true;
-        /*} else {
-            return true; // I think this solves the crash
-            //NO THIS CRASH THE GAME MORE
-        }*/
         }
     }
 
@@ -514,12 +508,20 @@ public class BlockInfintiyChest extends BlockContainer {
         return true;
     }
 
-    @SideOnly(Side.CLIENT)
+    /*@SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(final IIconRegister iIconRegister)
     {
-        this.blockIcon = iIconRegister.registerIcon("plus:infinity_chest_icon");
+        this.blockIcon = iIconRegister.registerIcon("plus:infinity_chest_work");
+    }*/
+
+    /*@Override
+    public IIcon getIcon(IBlockAccess p_149673_1_, int p_149673_2_, int p_149673_3_, int p_149673_4_, int p_149673_5_) {
+        return this.blockIcon;
+    }*/
+
+    @Override
+    public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_) {
+        return new ItemInfinityChest(this);
     }
-
-
 }

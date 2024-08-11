@@ -40,5 +40,11 @@ crafting.abs=Absolute Crafting Shaped
 #Misc
 itemGroup.plus=Plus Mod
 enchantment.level.20=XX
+enchantment.level.100=C
 container.compressor=Compressor
 tip.infinity=INFINITY
+options.difficulty.peaceful=Disaster
+options.difficulty.easy=Weak
+options.difficulty.normal=Gave up
+options.difficulty.hard=Hell
+options.difficulty.hardcore=HELL OF THE HELLS
