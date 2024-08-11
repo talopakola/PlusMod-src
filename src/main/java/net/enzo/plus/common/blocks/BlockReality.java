@@ -31,7 +31,7 @@ public class BlockReality extends Block {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int wut, float wut2, float wut3, float wut4) {
-        player.addChatMessage(new ChatComponentText("You think click on it have some effect? Lol"));
+        player.addChatMessage(new ChatComponentText("You think click it will explode? Lol"));
         timer.schedule(new TimerTask() {
             @Override
             public void run() {

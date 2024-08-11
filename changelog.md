@@ -1,3 +1,8 @@
+# 1.3
+1.3? It was really fast, no?
+1. Infinity Armor received a buff in speed
+2. All Infinity tools now have +INFINITY damage
+
 # 1.2
 1. Storage Drawers compat
 2. Config for Storage Drawers compat

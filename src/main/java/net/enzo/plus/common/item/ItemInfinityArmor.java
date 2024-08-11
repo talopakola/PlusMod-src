@@ -205,7 +205,7 @@ public class ItemInfinityArmor extends ItemArmor {
                         if (player.onGround || flying || swimming) {
                             boolean sneaking = player.isSneaking();
 
-                            float speed = 0.15f
+                            float speed = 0.23f
                                     * (flying ? 1.1f : 1.0f)
                                     * (sneaking ? 0.1f : 1.0f);
 
@@ -234,7 +234,7 @@ public class ItemInfinityArmor extends ItemArmor {
                 String key = playerKey(player);
 
                 if (playersWithFoot.contains(key)) {
-                    player.motionY += 0.4f;
+                    player.motionY += 0.6f; // BUFFS HAHAHAHAHAHAHAHAH
                 }
             }
         }

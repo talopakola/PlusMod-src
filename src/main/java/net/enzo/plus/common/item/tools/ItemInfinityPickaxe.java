@@ -5,13 +5,18 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.entities.EntityImmortalItem;
 import net.enzo.plus.common.item.InfinityItems;
+import net.enzo.plus.common.misc.DamageSourceInfinity;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.effect.EntityLightningBolt;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -26,6 +31,48 @@ public class ItemInfinityPickaxe extends ItemPickaxe {
         setTextureName("plus:infinity_pickaxe");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);
+    }
+    @Override
+    public boolean hitEntity(ItemStack stack, EntityLivingBase victim, EntityLivingBase player) {
+        if(player.worldObj.isRemote)
+            return true;
+        if (victim instanceof EntityPlayer) {
+            EntityPlayer pvp = (EntityPlayer)victim;
+            if (InfinityItems.isPlus(pvp)) {
+                victim.attackEntityFrom(new DamageSourceInfinity(player), 4.0F);
+            }
+            return true;
+        }
+        victim.func_110142_aN().func_94547_a(new DamageSourceInfinity(player), victim.getHealth(), victim.getHealth());
+        victim.setHealth(0);
+        victim.onDeath(new EntityDamageSource("infinity", player));
+        return true;
+    }
+
+    @Override
+    public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
+        if(!entity.worldObj.isRemote && entity instanceof EntityPlayer) {
+            EntityPlayer victim = (EntityPlayer)entity;
+            if(victim.capabilities.isCreativeMode && !victim.isDead && victim.getHealth() > 0 && !InfinityItems.isPlus(victim) && !stack.getTagCompound().getBoolean("farm")){
+                victim.func_110142_aN().func_94547_a(new DamageSourceInfinity(player), victim.getHealth(), victim.getHealth());
+                victim.setHealth(0);
+                victim.onDeath(new EntityDamageSource("infinity", player));
+                //player.addStat(Achievements.creative_kill, 1);
+                return true;
+            } else if (victim.capabilities.isCreativeMode && !victim.isDead && victim.getHealth() > 0 && !InfinityItems.isPlus(victim) && stack.getTagCompound().getBoolean("farm")) {
+                //player.getEntityWorld().spawnEntityInWorld(new EntityXPOrb(player.getEntityWorld(), player.posX, player.posZ, player.posY, 883));
+                player.addExperienceLevel(696969);
+                for (int i = 0; i < 43; i++) {
+                    entity.worldObj.spawnEntityInWorld(new EntityLightningBolt(entity.worldObj, entity.posX, entity.posY, entity.posZ));
+                }
+                victim.func_110142_aN().func_94547_a(new DamageSourceInfinity(player), victim.getHealth(), victim.getHealth());
+                victim.setHealth(0);
+                victim.onDeath(new EntityDamageSource("infinity", player));
+                //player.addStat(Achievements.creative_kill, 1);
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

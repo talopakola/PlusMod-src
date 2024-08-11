@@ -23,6 +23,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
+
+import java.io.File;
 
 @Mod(modid = Static.MODID, version = Static.VERSION)
 public class PlusMod
@@ -44,10 +47,8 @@ public class PlusMod
     public void earlyNightmare(FMLPreInitializationEvent event)
     {
         instance = this;
-
         ClientRegistry.bindTileEntitySpecialRenderer(TileInfinityChest.class, new TileInfinityChestRenderer());
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockInfintiyChest.instance), new InfinityChestRenderItem());
-
         Config.letsConfigurate(event.getSuggestedConfigurationFile());
         InfinityItems.letsRegisterEmAll();
         InfinityBlocks.consumeUniverse();

@@ -34,7 +34,7 @@ import java.util.Random;
 public class ItemInfinitySword extends ItemSwordCooler {
     public static Random randy = new Random();
     public IIcon farmer;
-    private static final ToolMaterial opSword = EnumHelper.addToolMaterial("INFINITY_SWORD", 32, 9999, 9999F, -3.0F, 32);
+    private static final ToolMaterial opSword = EnumHelper.addToolMaterial("INFINITY_SWORD", 32, 9999, 9999F, Float.MAX_VALUE /*Useless, but exists :D*/, 32);
     public ItemInfinitySword() {
         super(opSword);
         setUnlocalizedName("infinity_sword");

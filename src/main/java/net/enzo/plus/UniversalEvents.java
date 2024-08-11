@@ -3,8 +3,7 @@ package net.enzo.plus;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.enzo.plus.client.ColorsText;
 import net.enzo.plus.common.item.InfinityItems;
-import net.enzo.plus.common.item.tools.ItemInfinitySword;
-import net.enzo.plus.common.item.tools.ToolHelper;
+import net.enzo.plus.common.item.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
@@ -26,7 +25,7 @@ public class UniversalEvents {
 
     @SubscribeEvent // Is SubscribeEvent not EventHandler, dumbass
     public void onTooltip(ItemTooltipEvent event) {
-        if (event.itemStack.getItem() instanceof ItemInfinitySword) {
+        if (event.itemStack.getItem() instanceof ItemInfinitySword || event.itemStack.getItem() instanceof ItemInfinityPickaxe || event.itemStack.getItem() instanceof ItemInfinityShovel || event.itemStack.getItem() instanceof ItemInfinityAxe) {
             for(int x = 0;x < event.toolTip.size();x++){
                 if(event.toolTip.get(x).contains(StatCollector.translateToLocal("attribute.name.generic.attackDamage"))
                         || event.toolTip.get(x).contains(StatCollector.translateToLocal("Attack Damage"))){
