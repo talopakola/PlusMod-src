@@ -5,7 +5,12 @@
 4. Config for disable 100 looting, if have lag
 5. Avaritia Compat
 6. Config for Avaritia Compat
-5. ***WITHERZILA INFINITY SWORD IMMUNE LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOL***
+7. ***WITHERZILA INFINITY SWORD IMMUNE LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOL***
+
+# ATTENTION
+**"1.2" was a minor update ok?**
+
+**"1.1 hot fix" is a... "hot fix"?? And won't enter in changelog**
 
 # 1.1
 1. Infinity Pickaxe now break bedrock
