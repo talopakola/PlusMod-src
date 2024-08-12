@@ -5,6 +5,26 @@
 4. Infinity Banana now kill you (without armor)
 5. Infinity Bow kill you if not wearing full Infinity Armor
 
+## ATTENTION
+### I'm going to disappear for a while, thanks to school, YEYYYYYYYY
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+### (School sucks)
+
 # 1.2
 1. Storage Drawers compat
 2. Config for Storage Drawers compat
