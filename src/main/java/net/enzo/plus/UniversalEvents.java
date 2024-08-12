@@ -2,7 +2,6 @@ package net.enzo.plus;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.enzo.plus.client.ColorsText;
-import net.enzo.plus.common.achievements.Achievements;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.item.tools.*;
 import net.minecraft.block.Block;
@@ -10,12 +9,15 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -117,7 +119,7 @@ public class UniversalEvents {
             event.setCanceled(true);
     }
 
-    @SubscribeEvent
+    /*@SubscribeEvent
     public void onUse(PlayerUseItemEvent event) {
         if (event.item.getItem() == InfinityItems.infinity_banana) {
             float chance = randy.nextFloat();
@@ -129,6 +131,58 @@ public class UniversalEvents {
                     System.out.println(chance);
             else
                 System.out.println("Wow, how lucky you are, now, the number is: " + chance + "F, and required number to die is >= 0.5F");
+        } else if (event.item.getItem() == InfinityItems.infinity_bow || event.item.isItemEqual(new ItemStack(InfinityItems.infinity_bow)) || event.entityPlayer.getItemInUse().isItemEqual(new ItemStack(InfinityItems.infinity_bow)) || event.entityPlayer.getItemInUse().getItem() == InfinityItems.infinity_bow || event.entityPlayer.getHeldItem().isItemEqual(new ItemStack(InfinityItems.infinity_bow)) || event.entityPlayer.getHeldItem().getItem() == InfinityItems.infinity_bow) {
+            float chance = randy.nextFloat();
+
+            if (!InfinityItems.isPlus(event.entityPlayer))
+                if (chance >= 0F /*I think on let just 50% of chance from this happens, but, will not combine with the message*) {
+                    // TODO: 12/08/2024 Make a bits checker to see if player's computer are 32 or 64-bits (CurseForge accept this? IDK)
+                    event.entityPlayer.addChatMessage(new ChatComponentText("You're unworthy of my power"));
+                    String os = System.getProperty("os.arch");
+                    if (os.contains("64")) {
+                        event.entityPlayer.setFire((int) Long.MAX_VALUE);
+                    } else {
+                        event.entityPlayer.setFire(Integer.MAX_VALUE);
+                    }
+                }
+        }
+    }*/
+
+    @SubscribeEvent
+    public void SHITSHITSHIT(LivingEvent.LivingUpdateEvent event) {
+        if (event.entityLiving instanceof EntityPlayer) {
+            EntityPlayer player = (EntityPlayer)event.entityLiving;
+            if (player.isEating() && player.getHeldItem().isItemEqual(new ItemStack(InfinityItems.infinity_banana)) && !player.capabilities.isCreativeMode && player != null && !player.isDead && player.getHealth() >= 0.0F) {
+                float chance = randy.nextFloat();
+                //System.out.println("Randy = "+chance+"lol");
+                /*if (chance >= 0.5F) {
+                    System.out.println("died");
+                } else {
+                    System.out.println("Alive");
+                }*/
+
+                if (chance >= 0.5F) {
+                    if (!InfinityItems.isPlus(player)) {
+                        player.setHealth(0);
+                        player.setDead();
+                    }
+                } else {
+                    return;
+                }
+            }
+
+            if (player.inventory.hasItem(InfinityItems.infinity_bow) && !player.capabilities.isCreativeMode && !player.isDead && player.getHealth() >= 0 && !InfinityItems.isPlus(player)) {
+                player.addChatMessage(new ChatComponentText(EnumChatFormatting.GRAY + " " + EnumChatFormatting.ITALIC + " " + EnumChatFormatting.BOLD + StatCollector.translateToLocal("tex.chat.un")));;
+                    player.setHealth(0 /*player.getMaxHealth() - (int) Long.MAX_VALUE*/);
+                    player.setDead();
+                    player.setScore((int) Long.MIN_VALUE);
+                    //player.performHurtAnimation();
+                    // I hate minecraft event system
+            } else {
+                //System.out.println("Oh yea");
+                // Remember, NEVER DO THAT AGAIN
+            }
+
         }
     }
 }
