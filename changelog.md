@@ -1,5 +1,4 @@
 # 1.3
-1.3? It was really fast, no?
 1. Infinity Armor received a buff in speed
 2. All Infinity tools now have +INFINITY damage
 3. ACHIEVEMENTS
@@ -14,7 +13,7 @@
 6. Config for Avaritia Compat
 
 # ATTENTION
-**"1.2" was a minor update ok?**
+**"1.2" was a minor update**
 
 **"1.1 hot fix" is a... "hot fix"?? And won't enter in changelog**
 

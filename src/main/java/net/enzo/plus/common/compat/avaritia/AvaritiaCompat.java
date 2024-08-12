@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 
 public class AvaritiaCompat {
     public static void father() /*Father??*/ {
+        Grinder.catalyst.getInput().add(new ItemStack(InfinityItems.mixed));
         Grinder.catalyst.getInput().add(new ItemStack(InfinityItems.star));
         Grinder.catalyst.getInput().add(new ItemStack(InfinityItems.star_core));
 
