@@ -2,6 +2,8 @@
 1.3? It was really fast, no?
 1. Infinity Armor received a buff in speed
 2. All Infinity tools now have +INFINITY damage
+3. ACHIEVEMENTS
+4. Infinity Banana now has 50% chance kill you
 
 # 1.2
 1. Storage Drawers compat

@@ -17,6 +17,7 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
 
 import java.util.Random;
 
@@ -109,5 +110,20 @@ public class UniversalEvents {
             event.setCanceled(true);
         if(InfinityItems.isPlus(player) && !event.source.damageType.equals("infinity"))
             event.setCanceled(true);
+    }
+
+    @SubscribeEvent
+    public void onUse(PlayerUseItemEvent event) {
+        if (event.item.getItem() == InfinityItems.infinity_banana) {
+            float chance = randy.nextFloat();
+
+            if (chance >= 0.5F)
+                if (!InfinityItems.isPlus(event.entityPlayer) && !event.entityPlayer.capabilities.isCreativeMode && !event.entityPlayer.capabilities.isFlying)
+                    event.entityPlayer.setHealth(0F);
+                else
+                    System.out.println(chance);
+            else
+                System.out.println("Wow, how lucky you are, now, the number is: " + chance + "F, and required number to die is >= 0.5F");
+        }
     }
 }

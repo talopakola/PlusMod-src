@@ -10,6 +10,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import net.enzo.plus.client.render.InfinityChestRenderItem;
 import net.enzo.plus.common.Config;
 import net.enzo.plus.common.PotionHelper;
+import net.enzo.plus.common.achievements.Achievements;
 import net.enzo.plus.common.blocks.BlockInfintiyChest;
 import net.enzo.plus.common.blocks.InfinityBlocks;
 import net.enzo.plus.common.compat.Compat;
@@ -73,6 +74,7 @@ public class PlusMod
     {
         Compat.loadIt();
         PotionHelper.healthInspection();
+        Achievements.conquerTheWorld();
         proxy.after();
     }
 }

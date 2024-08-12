@@ -134,17 +134,12 @@ public class ItemInfinitySword extends ItemSwordCooler {
                 victim.onDeath(new EntityDamageSource("infinity", player));
                 //player.addStat(Achievements.creative_kill, 1);
                 return true;
-            } else if (victim.capabilities.isCreativeMode && !victim.isDead && victim.getHealth() > 0 && !InfinityItems.isPlus(victim) && stack.getTagCompound().getBoolean("farm")) {
-                    //player.getEntityWorld().spawnEntityInWorld(new EntityXPOrb(player.getEntityWorld(), player.posX, player.posZ, player.posY, 883));
+            }
+            if (stack.getTagCompound().getBoolean("farm")) {
                 player.addExperienceLevel(696969);
                 for (int i = 0; i < 43; i++) {
                     entity.worldObj.spawnEntityInWorld(new EntityLightningBolt(entity.worldObj, entity.posX, entity.posY, entity.posZ));
                 }
-                victim.func_110142_aN().func_94547_a(new DamageSourceInfinity(player), victim.getHealth(), victim.getHealth());
-                victim.setHealth(0);
-                victim.onDeath(new EntityDamageSource("infinity", player));
-                //player.addStat(Achievements.creative_kill, 1);
-                return true;
             }
         }
         return false;

@@ -24,6 +24,26 @@ tile.tile_star_core.name=Star Core Block
 tile.reality.name=Reality Block
 tile.infinity_chest.name=Infinity Chest
 #
+#Achievement
+achievement.plus:mixed=The start of a nightmare.
+achievement.plus:mixed.desc=You crafted your first Mixed Ingot... The first of many.
+achievement.plus:star=Star and it's existence
+achievement.plus:star.desc=You crafted a Star Ingot
+achievement.plus:abs=Craft and suffering
+achievement.plus:abs.desc=You crafted a Absolute Crafting Table
+achievement.plus:core=Very massive
+achievement.plus:core.desc=You crafted a Star Core
+achievement.plus:coke=INFINITY STORAGE
+achievement.plus:coke.desc=You crafted a Infinity Chest
+achievement.plus:reality=The reality... In your hand...
+achievement.plus:reality.desc=You crafted a Reality Cristal
+achievement.plus:existence=§r"Made in §kHEAVEN§r"
+achievement.plus:existence.desc=You crafted the only God's fear...
+achievement.plus:banana=Banana?
+achievement.plus:banana.desc=Caution with this, can kill (literally) your hungry
+achievement.plus:apple=Yum, Yum
+achievement.plus:apple.desc=An delicious and (not literally) infinity apple!
+#
 #Tooltip
 tooltip.mixed.desc=A mix of every materials. You know, it can be powerful...
 tooltip.star.desc=Star consists in a mix of materials and itself, but now you have your own copy.
@@ -34,7 +54,7 @@ lore.existence.desc="In the start of existence, God created powerful materials, 
 tooltip.sword.desc=Created to defense the peace from a possible corruption... You choose, destroy everything, or save everything?
 tooltip.sanic.desc=SONIC SPEED
 #
-#JEI
+#NEI
 crafting.abs=Absolute Crafting Shaped
 #
 #Misc
