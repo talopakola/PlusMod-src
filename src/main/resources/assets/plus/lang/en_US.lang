@@ -43,6 +43,8 @@ achievement.plus:banana=Banana?
 achievement.plus:banana.desc=Caution with this, can kill (literally) your hungry
 achievement.plus:iApple=Yum, Yum
 achievement.plus:iApple.desc=An delicious and (not literally) infinity apple!
+achievement.plus:breakB=Even the unbreakable can be broken
+achievement.plus:breakB.desc=Break and pickup a bedrock
 #
 #Tooltip
 tooltip.mixed.desc=A mix of every materials. You know, it can be powerful...

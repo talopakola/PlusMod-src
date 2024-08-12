@@ -5,6 +5,7 @@ import net.enzo.plus.common.Config;
 import net.enzo.plus.common.blocks.InfinityBlocks;
 import net.enzo.plus.common.compat.Compat;
 import net.enzo.plus.common.item.InfinityItems;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
@@ -12,9 +13,6 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class Achievements {
     public static Achievement mixed;
-
-    public static AchievementPage page;
-
     public static Achievement star;
     public static Achievement abs;
     public static Achievement core;
@@ -23,6 +21,9 @@ public class Achievements {
     public static Achievement existence;
     public static Achievement banana;
     public static Achievement apple;
+    public static Achievement bedrock;
+
+    public static AchievementPage page;
 
     public static void conquerTheWorld() {
         mixed = new InfinityAchievements("mixed", 0, 0, InfinityItems.mixed, null);
@@ -35,7 +36,7 @@ public class Achievements {
         apple = new InfinityAchievements("iApple", -5, -5, InfinityItems.infinity_apple, abs).setSpecial();
         if (Compat.father && Config.father)
             banana = new InfinityAchievements("banana", -4, 1, InfinityItems.infinity_banana, mixed);
-
+        //bedrock = new InfinityAchievements("breakB", 1, 5, Item.getItemFromBlock(Blocks.bedrock), existence).setSpecial();
 
         page = new AchievementPage("Plus", InfinityAchievements.achievements.toArray(new Achievement[InfinityAchievements.achievements.size()]));
         AchievementPage.registerAchievementPage(page);

@@ -6,8 +6,11 @@ import net.enzo.plus.common.Config;
 import net.enzo.plus.common.blocks.InfinityBlocks;
 import net.enzo.plus.common.compat.Compat;
 import net.enzo.plus.common.item.InfinityItems;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
+import net.minecraftforge.event.world.BlockEvent.*;
 
 public class AchievementsTriggerInfinity {
     @SubscribeEvent
@@ -34,9 +37,20 @@ public class AchievementsTriggerInfinity {
             if (event.crafting.getItem() == InfinityItems.existence) {
                 event.player.addStat(Achievements.existence, 1);
             }
+            if (event.crafting.getItem() == InfinityItems.infinity_apple) {
+                event.player.addStat(Achievements.apple, 1);
+            }
             if (event.crafting.getItem() == InfinityItems.infinity_banana && Compat.father && Config.father) {
                 event.player.addStat(Achievements.banana, 1);
             }
+        }
+    }
+
+    @SubscribeEvent
+    public void onPick(ItemPickupEvent event) {
+        if (event.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(Blocks.bedrock))) && event.player != null) {
+            //event.player.addStat(Achievements.bedrock, 1);
+            // HIHI HA
         }
     }
 }

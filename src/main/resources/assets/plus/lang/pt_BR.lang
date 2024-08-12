@@ -42,7 +42,9 @@ achievement.plus:existence.desc=Você craftou o único medo de Deus.
 achievement.plus:banana=Banana?
 achievement.plus:banana.desc=Cuidado com isso, pode (literalmente) matar sua fome!
 achievement.plus:iApple=Yum, Yum.
-achievement.plus:iApple.desc=Uma deliciosa (não literal) maçã infinita
+achievement.plus:iApple.desc=Uma deliciosa (não literal) maçã infinita.
+achievement.plus:breakB=Mesmo os blocos inquebráveis, podem ser quebrados!
+achievement.plus:breakB.desc=Quebre e pegue uma Rocha-Mãe
 #
 #Tooltip
 tooltip.mixed.desc=Uma mistura de todos os materiais. Você sabe, pode ser poderoso

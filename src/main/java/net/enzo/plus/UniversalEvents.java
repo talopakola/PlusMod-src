@@ -2,12 +2,14 @@ package net.enzo.plus;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.common.achievements.Achievements;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.item.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
@@ -74,6 +76,9 @@ public class UniversalEvents {
                     block.harvestBlock(event.world, event.entityPlayer, event.x, event.y, event.z, meta);
                 event.entityPlayer.worldObj.setBlockToAir(event.x, event.y, event.z);
                 event.world.playAuxSFX(2001, event.x, event.y, event.z, Block.getIdFromBlock(block) + (meta << 12));
+                if (event.world.getBlock(event.x, event.y, event.z) == Blocks.bedrock) {
+                    //event.entityPlayer.addStat(Achievements.bedrock, 1);
+                }
             }
         }
     }

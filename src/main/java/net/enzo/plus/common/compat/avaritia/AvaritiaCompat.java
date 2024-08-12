@@ -5,15 +5,11 @@ import fox.spiteful.avaritia.crafting.Grinder;
 import fox.spiteful.avaritia.items.LudicrousItems;
 import net.enzo.plus.common.blocks.InfinityBlocks;
 import net.enzo.plus.common.item.InfinityItems;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class AvaritiaCompat {
-    public static ShapelessOreRecipe catalyst;
-
     public static void father() /*Father??*/ {
         Grinder.catalyst.getInput().add(new ItemStack(InfinityItems.star));
         Grinder.catalyst.getInput().add(new ItemStack(InfinityItems.star_core));

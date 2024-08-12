@@ -106,6 +106,13 @@ public class ItemInfinitySword extends ItemSwordCooler {
                 if (InfinityItems.isPlus(pvp)) {
                     victim.attackEntityFrom(new DamageSourceInfinity(player), 4.0F);
                 }
+            if (stack.getTagCompound().getBoolean("farm")) {
+                EntityPlayer player2 = (EntityPlayer)player;
+                player2.addExperienceLevel(696969);
+                for (int i = 0; i < 43; i++) {
+                    victim.worldObj.spawnEntityInWorld(new EntityLightningBolt(victim.worldObj, victim.posX, victim.posY, victim.posZ));
+                }
+            }
             return true;
         }
         victim.func_110142_aN().func_94547_a(new DamageSourceInfinity(player), victim.getHealth(), victim.getHealth());
