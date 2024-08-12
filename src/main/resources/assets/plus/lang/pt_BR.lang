@@ -24,6 +24,26 @@ tile.tile_star_core.name=Bloco de Núcleo de Estrela
 tile.reality.name=Bloco de Realidade
 tile.infinity_chest.name=Baú do Infinito
 #
+#Achievement
+achievement.plus:mixed=O início de um pesadelo.
+achievement.plus:mixed.desc=Você craftou uma Barra Misturada... Uma de várias.
+achievement.plus:star=Estrela e sua existência.
+achievement.plus:star.desc=Você craftou um Barra de Estrela.
+achievement.plus:abs=Crafting e Sofrimento.
+achievement.plus:abs.desc=Você craftou uma Mesa de Trabalho Absoluta.
+achievement.plus:core=Muito Massivo.
+achievement.plus:core.desc=Você craftou um Núcleo de Estrela.
+achievement.plus:coke=ARMAZENAMENTO INFINITO.
+achievement.plus:coke.desc=Você fez um Baú do Infinito.
+achievement.plus:reality=A realidade... Na sua mão...
+achievement.plus:reality.desc=Você fez um Cristal da Realidade.
+achievement.plus:existence=§r"Feito no §kCÉU§r.".
+achievement.plus:existence.desc=Você craftou o único medo de Deus.
+achievement.plus:banana=Banana?
+achievement.plus:banana.desc=Cuidado com isso, pode (literalmente) matar sua fome!
+achievement.plus:iApple=Yum, Yum.
+achievement.plus:iApple.desc=Uma deliciosa (não literal) maçã infinita
+#
 #Tooltip
 tooltip.mixed.desc=Uma mistura de todos os materiais. Você sabe, pode ser poderoso
 tooltip.star.desc=Estrelas são uma mistura de materiais e ela mesma, mas você possuí uma cópia própria.
@@ -34,7 +54,7 @@ lore.existence.desc="No início da existência, Deus criou poderosos materiais, 
 tooltip.sword.desc=Criada para uma possível corrupção... Você escolhe, destruir tudo ou salvar tudo?
 tooltip.sanic.desc=VELOCIDADE SÔNICA
 #
-#JEI
+#NEI
 crafting.abs=Absolute Crafting Shaped
 #
 #Misc
