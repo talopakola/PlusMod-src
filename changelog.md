@@ -3,7 +3,7 @@
 1. Infinity Armor received a buff in speed
 2. All Infinity tools now have +INFINITY damage
 3. ACHIEVEMENTS
-4. Infinity Banana now has 50% chance kill you
+4. Infinity Banana now has 50% chance kill you (without armor)
 
 # 1.2
 1. Storage Drawers compat
