@@ -33,7 +33,7 @@ public class ItemInfinityArmor extends ItemArmor {
         this.slot = slot;
         setCreativeTab(PlusMod.tab);
         setUnlocalizedName("infinity_armor_"+slot);
-        setTextureName("plus:infinity_"+slot); // This will not cause problems later?
+        setTextureName("plus:armor/infinity_"+slot); // This will not cause problems later?
         // IDK bro, I just do it
     }
 

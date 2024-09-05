@@ -15,7 +15,7 @@ import java.util.List;
 public class ItemStarIngot extends Item {
     public ItemStarIngot() {
         setUnlocalizedName("star_ingot");
-        setTextureName("plus:star_ingot");
+        setTextureName("plus:resources/star_ingot/star_ingot");
         setCreativeTab(PlusMod.tab);
     }
 

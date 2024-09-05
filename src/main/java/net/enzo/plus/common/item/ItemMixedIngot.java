@@ -12,7 +12,7 @@ import java.util.List;
 public class ItemMixedIngot extends Item {
     public ItemMixedIngot() {
         this.setUnlocalizedName("mixed_ingot");
-        this.setTextureName("plus:mixed_ingot");
+        this.setTextureName("plus:resources/mixed_ingot/mixed_ingot");
         this.setCreativeTab(PlusMod.tab); // Materials tab?
         // Is in Materials tab temporarily
     }

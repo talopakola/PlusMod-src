@@ -37,7 +37,7 @@ public class ItemInfinitySword extends ItemSwordCooler {
     public ItemInfinitySword() {
         super(opSword);
         setUnlocalizedName("infinity_rsword");
-        setTextureName("plus:infinity_sword");
+        setTextureName("plus:tools/infinity_sword/infinity_sword");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);
     }
@@ -78,10 +78,10 @@ public class ItemInfinitySword extends ItemSwordCooler {
     public void registerIcons(IIconRegister r) {
         super.registerIcons(r);
 
-        this.itemIcon = r.registerIcon("plus:infinity_sword");
-        color = r.registerIcon("plus:infinity_sword_color");
+        this.itemIcon = r.registerIcon("plus:tools/infinity_sword/infinity_sword");
+        color = r.registerIcon("plus:tools/infinity_sword/infinity_sword_color");
 
-        farmer = r.registerIcon("plus:infinity_farm");
+        farmer = r.registerIcon("plus:tools/infinity_sword/infinity_farm");
     }
 
     @Override

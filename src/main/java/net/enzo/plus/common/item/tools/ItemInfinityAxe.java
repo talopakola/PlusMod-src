@@ -20,7 +20,7 @@ public class ItemInfinityAxe extends ItemAxe {
     public ItemInfinityAxe() {
         super(opAxe);
         setUnlocalizedName("infinity_raxe");
-        setTextureName("plus:infinity_axe");
+        setTextureName("plus:tools/infinity_axe/infinity_axe");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);
     }

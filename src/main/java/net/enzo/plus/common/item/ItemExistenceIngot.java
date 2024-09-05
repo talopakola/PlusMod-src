@@ -17,7 +17,7 @@ import java.util.List;
 public class ItemExistenceIngot extends Item {
     public ItemExistenceIngot() {
         setUnlocalizedName("existence_ingot");
-        setTextureName("plus:existence_ingot");
+        setTextureName("plus:resources/existence_ingot/existence_ingot");
         setCreativeTab(PlusMod.tab);
     }
 

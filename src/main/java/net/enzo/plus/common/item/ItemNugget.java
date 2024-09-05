@@ -36,7 +36,7 @@ public class ItemNugget extends Item {
         icons = new IIcon[types.length];
 
         for (int x = 0; x < types.length; x++) {
-            icons[x] = ir.registerIcon("plus:" + types[x]);
+            icons[x] = ir.registerIcon("plus:" + "nuggets/" + types[x]);
         }
     }
 

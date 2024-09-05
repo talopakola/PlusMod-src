@@ -61,8 +61,8 @@ public class InfinityItems {
         if (Config.craftOnly)
             return;
 
-        infinity_apple = butSetItFirst(new ItemInfinityApple(400, 400.0F, false).setPotionEffect(Potion.regeneration.getId(), 1728000, 100, 1.0F).setAlwaysEdible().setTextureName("plus:infinity_apple").setCreativeTab(PlusMod.tab).setUnlocalizedName("infinity_apple"), "Infinity_Apple");
-        infinity_banana = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.damageBoost.getId(), 1728000, 100, 1.0F).setAlwaysEdible().setUnlocalizedName("infinity_banana").setTextureName("plus:infinity_banana").setCreativeTab(PlusMod.tab), "Infinity_Banana"); // ... What I did????
+        infinity_apple = butSetItFirst(new ItemInfinityApple(400, 400.0F, false).setPotionEffect(Potion.regeneration.getId(), 1728000, 100, 1.0F).setAlwaysEdible().setTextureName("plus:foods/infinity_apple").setCreativeTab(PlusMod.tab).setUnlocalizedName("infinity_apple"), "Infinity_Apple");
+        infinity_banana = butSetItFirst(new ItemFood(400, 400.0F, false).setPotionEffect(Potion.damageBoost.getId(), 1728000, 100, 1.0F).setAlwaysEdible().setUnlocalizedName("infinity_banana").setTextureName("plus:foods/infinity_banana").setCreativeTab(PlusMod.tab), "Infinity_Banana"); // ... What I did????
 
         infinity_sword = butSetItFirst(new ItemInfinitySword(), "infinity_sword");
         infinity_pickaxe = butSetItFirst(new ItemInfinityPickaxe(), "infinity_pickaxe");

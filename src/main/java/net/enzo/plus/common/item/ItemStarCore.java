@@ -14,7 +14,7 @@ import java.util.List;
 public class ItemStarCore extends Item {
     public ItemStarCore() {
         setUnlocalizedName("star_core");
-        setTextureName("plus:star_core");
+        setTextureName("plus:resources/star_core/star_core");
         setCreativeTab(PlusMod.tab);
     }
 

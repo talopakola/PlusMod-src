@@ -17,7 +17,7 @@ import java.util.List;
 public class ItemRealityCristal extends Item {
     public ItemRealityCristal() {
         setUnlocalizedName("reality_cristal");
-        setTextureName("plus:reality_cristal");
+        setTextureName("plus:resources/reality_cristal/reality_cristal");
         setCreativeTab(PlusMod.tab);
     }
 

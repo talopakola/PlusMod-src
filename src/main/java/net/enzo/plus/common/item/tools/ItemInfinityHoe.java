@@ -21,7 +21,7 @@ public class ItemInfinityHoe extends ItemHoe {
     public ItemInfinityHoe() {
         super(opHoe);
         setUnlocalizedName("infinity_hoe");
-        setTextureName("plus:infinity_hoe");
+        setTextureName("plus:tools/infinity_hoe/infinity_hoe");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);
     }
