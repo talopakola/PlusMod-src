@@ -17,10 +17,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.*;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EntityDamageSource;
 import net.minecraft.util.EnumChatFormatting;
@@ -34,6 +31,7 @@ import java.util.Random;
 
 public class ItemInfinitySword extends ItemSwordCooler {
     public static Random randy = new Random();
+    public IIcon color;
     public IIcon farmer;
     private static final ToolMaterial opSword = EnumHelper.addToolMaterial("INFINITY_SWORD", 32, 9999, 9999F, Float.MAX_VALUE /*Useless, but exists :D*/, 32);
     public ItemInfinitySword() {
@@ -66,20 +64,35 @@ public class ItemInfinitySword extends ItemSwordCooler {
     }
 
     @Override
+    public EnumAction getItemUseAction(ItemStack p_77661_1_) {
+        return EnumAction.block;
+        // Ok, didn't work...
+    }
+
+    @Override
+    public boolean requiresMultipleRenderPasses() {
+        return true;
+    }
+
+    @Override
     public void registerIcons(IIconRegister r) {
         super.registerIcons(r);
 
         this.itemIcon = r.registerIcon("plus:infinity_sword");
+        color = r.registerIcon("plus:infinity_sword_color");
+
         farmer = r.registerIcon("plus:infinity_farm");
     }
 
     @Override
     public IIcon getIcon(ItemStack stack, int pass) {
+        if (pass == 1) { return color; }
         NBTTagCompound tags = stack.getTagCompound();
         if(tags != null){
             if(tags.getBoolean("farm"))
                 return farmer;
         }
+
         return itemIcon;
 
     }
@@ -93,7 +106,7 @@ public class ItemInfinitySword extends ItemSwordCooler {
     @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
-        tooltip.add(EnumChatFormatting.ITALIC+""+EnumChatFormatting.GRAY+ StatCollector.translateToLocal("tooltip.sword.desc"));
+        tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.sword.desc"));
     }
 
     @Override

@@ -9,6 +9,9 @@
 8. Mass re-texture.
 9. Ore Dictionary for every Plus material!
 10. Shapeless MineTweaker support? (IDK).
+11. Now, tooltips for the items have the correct formatting.
+12. Infinity Apple now gives potions for 1 day: Absorption, Regeneration, Haste, Strength, Resistance, Instant Health and Fire Resistance.
+13. Infinity Apple is infinity now.
 
 # 1.3
 1. Infinity Armor received a buff in speed

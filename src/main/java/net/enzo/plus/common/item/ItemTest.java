@@ -7,7 +7,7 @@ public class ItemTest extends Item {
     // Debug item, ignore it.
     public ItemTest() {
         this.setUnlocalizedName("itemTest");
-        this.setTextureName("plus:itemTest");
+        //this.setTextureName("plus:itemTest");
         //this.setCreativeTab(CreativeTabs.tabMisc);
     }
 }

@@ -10,10 +10,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemHoe;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
@@ -27,6 +24,11 @@ public class ItemInfinityHoe extends ItemHoe {
         setTextureName("plus:infinity_hoe");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);
+    }
+
+    @Override
+    public EnumAction getItemUseAction(ItemStack p_77661_1_) {
+        return EnumAction.block;
     }
 
     @Override

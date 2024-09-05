@@ -1,7 +1,6 @@
 package net.enzo.plus.common.item;
 
 import net.enzo.plus.PlusMod;
-import net.enzo.plus.client.ColorsText;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -21,7 +20,7 @@ public class ItemStarIngot extends Item {
     @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
-        tooltip.add(EnumChatFormatting.ITALIC+""+EnumChatFormatting.GRAY+ StatCollector.translateToLocal("tooltip.star.desc"));
+        tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.star.desc"));
     }
 
     // Cool random function

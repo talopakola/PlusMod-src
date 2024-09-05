@@ -4,7 +4,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.enzo.plus.PlusMod;
-import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.client.InfinityText;
 import net.enzo.plus.common.Config;
 import net.enzo.plus.common.PotionHelper;
 import net.enzo.plus.common.entities.EntityImmortalItem;
@@ -98,7 +98,7 @@ public class ItemInfinityArmor extends ItemArmor {
 
     @Override
     public String getItemStackDisplayName(ItemStack p_77653_1_) {
-        return ColorsText.rainbow(StatCollector.translateToLocal("item.infinity_armor_" + slot + ".name"));
+        return InfinityText.rainbow(StatCollector.translateToLocal("item.infinity_armor_" + slot + ".name"));
     } // Isso é incrível mano, não tem como
 
     @Override
@@ -109,7 +109,7 @@ public class ItemInfinityArmor extends ItemArmor {
     @Override
     public void addInformation(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List tooltip, boolean sex) {
         if (slot == 3) {
-            tooltip.add(ColorsText.rainbow(StatCollector.translateToLocal("tooltip.sanic.desc"))); // SANIC
+            tooltip.add(InfinityText.rainbow(StatCollector.translateToLocal("tooltip.sanic.desc"))); // SANIC
         }
     }
 

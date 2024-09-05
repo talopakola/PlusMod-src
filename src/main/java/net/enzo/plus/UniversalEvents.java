@@ -1,19 +1,16 @@
 package net.enzo.plus;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.client.InfinityText;
 import net.enzo.plus.common.blocks.BlockReality;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.item.ItemInfinityArmor;
 import net.enzo.plus.common.item.tools.*;
-import net.enzo.plus.common.item.util.ItemSwordCooler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.*;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
@@ -25,9 +22,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
 
-import java.awt.event.KeyEvent;
 import java.util.Random;
 
 public class UniversalEvents {
@@ -39,18 +34,18 @@ public class UniversalEvents {
             for(int x = 0;x < event.toolTip.size();x++){
                 if(event.toolTip.get(x).contains(StatCollector.translateToLocal("attribute.name.generic.attackDamage"))
                         || event.toolTip.get(x).contains(StatCollector.translateToLocal("Attack Damage"))){
-                    event.toolTip.set(x, EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
+                    event.toolTip.set(x, EnumChatFormatting.BLUE + "+" + InfinityText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
                     return;
                 }
             }
         }
         if (event.itemStack.getItem() instanceof ItemInfinityArmor) {
             event.toolTip.add("");
-            event.toolTip.add(EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + EnumChatFormatting.RESET + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("tip.armor"));
+            event.toolTip.add(EnumChatFormatting.BLUE + "+" + InfinityText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + EnumChatFormatting.RESET + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("tip.armor"));
         }
         if (event.itemStack.getItem() instanceof  ItemInfinityHoe) {
             event.toolTip.add("");
-            event.toolTip.add(EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
+            event.toolTip.add(EnumChatFormatting.BLUE + "+" + InfinityText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
         }
 
         // Lol, I forgot the event things.

@@ -1,7 +1,7 @@
 package net.enzo.plus.common.item;
 
 import net.enzo.plus.PlusMod;
-import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.client.InfinityText;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -26,6 +26,6 @@ public class ItemStarCore extends Item {
     @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
-        tooltip.add(EnumChatFormatting.ITALIC+""+EnumChatFormatting.GRAY+ StatCollector.translateToLocal("tooltip.star_core.desc") + " " + ColorsText.rainbow(StatCollector.translateToLocal("star.desc.color")));
+        tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.star_core.desc") + " " + InfinityText.rainbow(StatCollector.translateToLocal("star.desc.color")));
     }
 }

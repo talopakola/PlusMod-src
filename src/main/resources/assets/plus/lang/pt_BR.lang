@@ -3,8 +3,8 @@ item.itemTest.name=Plus Debug (no function)
 item.mixed_ingot.name=Barra Misturada
 item.star_ingot.name=Barra de Estrela
 item.star_core.name=Núcleo de Estrela
-item.reality_cristal.name=Cristal da realidade
-item.existence_ingot.name=Barra da existência
+item.reality_cristal.name=Cristal da Realidade
+item.existence_ingot.name=Barra da Existência
 item.infinity_rsword.name=Deus dos Deuses
 item.infinity_rpickaxe.name=Comedor de Realidades
 item.infinity_raxe.name=O Medo de Mundos
@@ -57,6 +57,7 @@ lore.existence.desc="No início da existência, Deus criou poderosos materiais, 
 tooltip.sword.desc=Criada para uma possível corrupção... Você escolhe, destruir tudo ou salvar tudo?
 tooltip.sanic.desc=VELOCIDADE SÔNICA
 tooltip.blockReality.desc=Toda a realidade, em um pedaço de cubo...
+tooltip.Infinity_Apple.desc=O Infinito até que é gostoso!
 #
 #NEI
 crafting.abs=Absolute Crafting Shaped

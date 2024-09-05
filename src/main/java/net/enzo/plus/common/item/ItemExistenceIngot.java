@@ -1,7 +1,7 @@
 package net.enzo.plus.common.item;
 
 import net.enzo.plus.PlusMod;
-import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.client.InfinityText;
 import net.enzo.plus.common.entities.EntityImmortalItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,14 +28,14 @@ public class ItemExistenceIngot extends Item {
 
     @Override
     public String getItemStackDisplayName(ItemStack p_77653_1_) {
-        return ColorsText.rainbow(StatCollector.translateToLocal("item.existence_ingot.name"));
+        return InfinityText.rainbow(StatCollector.translateToLocal("item.existence_ingot.name"));
     } // FABULOSO -Talopakola
     // Absolute cinema, tem como não -Davi
 
     @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
-        tooltip.add(EnumChatFormatting.ITALIC+""+EnumChatFormatting.GRAY+ StatCollector.translateToLocal("lore.existence.desc"));
+        tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("lore.existence.desc"));
     }
 
     @Override

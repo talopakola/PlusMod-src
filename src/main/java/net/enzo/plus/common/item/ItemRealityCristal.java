@@ -1,7 +1,7 @@
 package net.enzo.plus.common.item;
 
 import net.enzo.plus.PlusMod;
-import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.client.InfinityText;
 import net.enzo.plus.common.entities.EntityImmortalItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -29,7 +29,7 @@ public class ItemRealityCristal extends Item {
     @SuppressWarnings({"unchecked", "rawtypes"})  // WHY INTELLIJ?
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
-        tooltip.add(EnumChatFormatting.ITALIC+""+EnumChatFormatting.GRAY+ ColorsText.rainbow(StatCollector.translateToLocal("tooltip.reality.desc")));
+        tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + InfinityText.rainbow(StatCollector.translateToLocal("tooltip.reality.desc")));
     }
 
     @Override

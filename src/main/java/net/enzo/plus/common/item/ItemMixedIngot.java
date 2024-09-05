@@ -19,6 +19,6 @@ public class ItemMixedIngot extends Item {
     @SuppressWarnings({"unchecked", "rawtypes"})  // WHY INTELLIJ?
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
-        tooltip.add(EnumChatFormatting.ITALIC+""+EnumChatFormatting.GRAY+ StatCollector.translateToLocal("tooltip.mixed.desc"));
+        tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.mixed.desc"));
     }
 }
