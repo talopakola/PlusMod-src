@@ -7,6 +7,7 @@ import net.enzo.plus.client.render.RenderHellArrow;
 import net.enzo.plus.common.blocks.BlockInfintiyChest;
 import net.enzo.plus.common.entities.EntityHellArrow;
 import net.enzo.plus.common.entities.EntityHellSubArrow;
+import net.enzo.plus.common.item.util.ItemBlockInfinityChest;
 import net.enzo.plus.common.proxy.CommonProxy;
 import net.enzo.plus.common.tiles.TileInfinityChest;
 import net.enzo.plus.common.tiles.TileInfinityChestRenderer;

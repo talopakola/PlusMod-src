@@ -29,9 +29,7 @@ public class InfinityChestRenderItem implements IItemRenderer {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void renderItem(ItemRenderType type, ItemStack item, Object... data)
-    {
-        model = new ModelChest();
-        model.renderAll();
+    public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+            TileInfinityChestRenderer.instance.renderTileEntityAt(tileEntityInfinityChest, -0.5F, -0.5F, -0.5F, 0);
     }
 }

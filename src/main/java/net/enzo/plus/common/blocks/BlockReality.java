@@ -13,6 +13,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class BlockReality extends Block {
+
+    public static final BlockReality instance = new BlockReality();
+
     public BlockReality() {
         super(Material.iron);
         setBlockName("reality");

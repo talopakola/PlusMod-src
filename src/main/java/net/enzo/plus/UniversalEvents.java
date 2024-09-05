@@ -2,6 +2,7 @@ package net.enzo.plus;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.enzo.plus.client.ColorsText;
+import net.enzo.plus.common.blocks.BlockReality;
 import net.enzo.plus.common.item.InfinityItems;
 import net.enzo.plus.common.item.ItemInfinityArmor;
 import net.enzo.plus.common.item.tools.*;
@@ -50,6 +51,11 @@ public class UniversalEvents {
         if (event.itemStack.getItem() instanceof  ItemInfinityHoe) {
             event.toolTip.add("");
             event.toolTip.add(EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
+        }
+
+        // Lol, I forgot the event things.
+        if (event.itemStack.getItem() == Item.getItemFromBlock(new BlockReality())) {
+            event.toolTip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.blockReality.desc"));
         }
 
         /*if (event.itemStack.getItem() instanceof Item || event.itemStack.getItem() instanceof ItemSpade || event.itemStack.getItem() instanceof ItemSword || event.itemStack.getItem() instanceof ItemAxe || event.itemStack.getItem() instanceof ItemPickaxe || event.itemStack.getItem() instanceof ItemHoe || event.itemStack.getItem() instanceof ItemSwordCooler) {

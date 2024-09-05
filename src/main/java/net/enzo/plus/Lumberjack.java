@@ -20,4 +20,7 @@ public class Lumberjack {
     public static void info(Object message) {
         log(Level.INFO, message);
     }
+    public static void debug(Object message) {
+        log(Level.INFO, "Debug" + message);
+    }
 }

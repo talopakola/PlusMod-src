@@ -1,6 +1,9 @@
 package net.enzo.plus.common.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.enzo.plus.common.Config;
+import net.enzo.plus.common.item.util.ItemBlockInfinityChest;
+import net.enzo.plus.common.item.util.ItemBlockReality;
 import net.enzo.plus.common.tiles.TileAbsoluteCraftingTable;
 import net.enzo.plus.common.tiles.TileInfinityChest;
 import net.minecraft.block.Block;
@@ -15,6 +18,13 @@ public class InfinityBlocks {
 
     public static void consumeUniverse() {
         absolute = GameRegistry.registerBlock(new BlockAbsoluteCraftingTable(), "absolute_craft");
+        mixedBlock = GameRegistry.registerBlock(new BlockMixedBlock(), "mixed_block");
+        //absolute = GameRegistry.registerBlock(new BlockStarCore(), "tile_star_core"); bruh
+        star = GameRegistry.registerBlock(new BlockStarCore(), "tile_star_core");
+        reality = GameRegistry.registerBlock(BlockReality.instance, ItemBlockReality.class, "Block_Reality");
+        if (Config.craftOnly)
+            return;
+
         coke = GameRegistry.registerBlock(new BlockInfintiyChest(), "Infinity_Chest");
         //comp = GameRegistry.registerBlock(new BlockCompressor(), "Plus_Compressor");
         // I gave up to try to do this, it simply crashes independent what I do.
@@ -25,10 +35,5 @@ public class InfinityBlocks {
         /*7377577274 bugs solved just registering the tile entities...
         * WHY I'M SO STUPID, WHY GOD, ANSWER ME, I SWEAR, WHY I'M SO FUCKING DUMB?????
         * */
-
-        mixedBlock = GameRegistry.registerBlock(new BlockMixedBlock(), "mixed_block");
-        //absolute = GameRegistry.registerBlock(new BlockStarCore(), "tile_star_core"); bruh
-        star = GameRegistry.registerBlock(new BlockStarCore(), "tile_star_core");
-        reality = GameRegistry.registerBlock(new BlockReality(), "Block_Reality");
     }
 }

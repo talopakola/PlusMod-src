@@ -16,7 +16,9 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.ResourceLocation;
 
+import javax.annotation.Nonnull;
 import java.util.Iterator;
 import java.util.List;
 

@@ -72,7 +72,7 @@ public class TileInfinityChestRenderer extends TileEntitySpecialRenderer {
             if (p_147500_1_.adjacentChestXPos == null && p_147500_1_.adjacentChestZPos == null)
             {
                 model = this.model;
-                this.bindTexture(chestTexture);
+                bindTexture(chestTexture);
             }
 
             GL11.glPushMatrix();

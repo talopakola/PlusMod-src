@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.Config;
 import net.enzo.plus.common.blocks.BlockInfintiyChest;
+import net.enzo.plus.common.blocks.BlockReality;
 import net.enzo.plus.common.item.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;

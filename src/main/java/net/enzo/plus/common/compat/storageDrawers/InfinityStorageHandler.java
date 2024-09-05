@@ -11,5 +11,7 @@ public class InfinityStorageHandler {
     public static void storageTheUniverse() {
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(ModItems.upgradeCreative), "    X    ", "   XXX   ", "  XDDDX  ", " CDDDDDC ", "CDDDBDDDC", " CDDDDDC ", "  XDDDX  ", "   XXX   ", "    X    ", 'X', InfinityItems.existence, 'D',new ItemStack(ModItems.upgrade, 1, 6), 'C', InfinityItems.realityCristal, 'B', InfinityBlocks.reality
         );
+        AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(ModItems.upgradeCreative, 1 , 1), "    X    ", "   XXX   ", "  XDDDX  ", " CDDDDDC ", "CDDDBDDDC", " CDDDDDC ", "  XDDDX  ", "   XXX   ", "    X    ", 'X', InfinityItems.existence, 'D', ModItems.upgradeVoid, 'C', InfinityItems.realityCristal, 'B', InfinityBlocks.reality
+        );
     }
 }
