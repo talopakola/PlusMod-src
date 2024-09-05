@@ -71,7 +71,7 @@ public class BlockInfintiyChest extends BlockContainer {
     @Override
     public int getRenderType()
     {
-        return 22;
+        return -1;
     }
     @Override
     public void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_) {

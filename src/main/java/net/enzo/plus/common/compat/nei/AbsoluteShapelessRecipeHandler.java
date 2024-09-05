@@ -11,6 +11,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.StatCollector;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
@@ -86,6 +87,8 @@ public class AbsoluteShapelessRecipeHandler extends ShapelessRecipeHandler {
                 CachedExtremeShapelessRecipe recipe = null;
                 if (irecipe instanceof AbsoluteCraftingShapeless)
                     recipe = shapelessRecipe((AbsoluteCraftingShapeless) irecipe);
+                else if (irecipe instanceof ShapelessOreRecipe)
+                    recipe = forgeExtremeShapelessRecipe((ShapelessOreRecipe) irecipe);
 
                 if (recipe == null)
                     continue;
@@ -105,6 +108,8 @@ public class AbsoluteShapelessRecipeHandler extends ShapelessRecipeHandler {
                 CachedExtremeShapelessRecipe recipe = null;
                 if (irecipe instanceof AbsoluteCraftingShapeless)
                     recipe = shapelessRecipe((AbsoluteCraftingShapeless) irecipe);
+                else if (irecipe instanceof ShapelessOreRecipe)
+                    recipe = forgeExtremeShapelessRecipe((ShapelessOreRecipe) irecipe);
 
                 if (recipe == null)
                     continue;
@@ -121,6 +126,8 @@ public class AbsoluteShapelessRecipeHandler extends ShapelessRecipeHandler {
             CachedExtremeShapelessRecipe recipe = null;
             if (irecipe instanceof AbsoluteCraftingShapeless)
                 recipe = shapelessRecipe((AbsoluteCraftingShapeless) irecipe);
+            else if (irecipe instanceof ShapelessOreRecipe)
+                recipe = forgeExtremeShapelessRecipe((ShapelessOreRecipe) irecipe); //XD, ty Avaritia for have all I need
 
             if (recipe == null)
                 continue;
@@ -138,6 +145,15 @@ public class AbsoluteShapelessRecipeHandler extends ShapelessRecipeHandler {
 
         return new CachedExtremeShapelessRecipe(recipe.recipeItems, recipe.getRecipeOutput());
     }
+    public CachedExtremeShapelessRecipe forgeExtremeShapelessRecipe(ShapelessOreRecipe recipe) {
+        ArrayList<Object> items = recipe.getInput();
+
+        for (Object item : items)
+            if (item instanceof List && ((List<?>) item).isEmpty())//ore handler, no ores
+                return null;
+
+        return new CachedExtremeShapelessRecipe(items, recipe.getRecipeOutput());
+    }
     @Override
     public void loadTransferRects() {
         transferRects.add(new RecipeTransferRect(new Rectangle(166, 74, 24, 18), "abs"));
@@ -151,7 +167,7 @@ public class AbsoluteShapelessRecipeHandler extends ShapelessRecipeHandler {
     @Override
     public String getGuiTexture()
     {
-        return "avaritia:textures/gui/extreme_nei.png";
+        return "plus:textures/gui/abs_nei.png";
     }
 
     @Override

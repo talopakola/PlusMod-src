@@ -5,11 +5,11 @@ item.star_ingot.name=Star Ingot
 item.star_core.name=Star Core
 item.reality_cristal.name=Reality Cristal
 item.existence_ingot.name=Existence Ingot
-item.infinity_sword.name=God of Gods
-item.infinity_pickaxe.name=Realities Eater
-item.infinity_axe.name=The Worlds Fear
-item.infinity_shovel.name=Planets Destroyer
-item.infinity_bow.name=Hell Bow
+item.infinity_rsword.name=God of Gods
+item.infinity_rpickaxe.name=Realities Eater
+item.infinity_raxe.name=The Worlds Fear
+item.infinity_rshovel.name=Planets Destroyer
+item.infinity_rbow.name=Hell Bow
 item.infinity_armor_0.name=Infinity Helmet
 item.infinity_armor_1.name=Infinity Chestplate
 item.infinity_armor_2.name=Infinity Leggings
@@ -40,7 +40,7 @@ achievement.plus:reality.desc=You crafted a Reality Cristal
 achievement.plus:existence=§r"Made in §kHEAVEN§r"
 achievement.plus:existence.desc=You crafted the only God's fear...
 achievement.plus:banana=Banana?
-achievement.plus:banana.desc=Caution with this, can kill (literally) your hungry
+achievement.plus:banana.desc=Caution with this, can (literally) kill your hungry
 achievement.plus:iApple=Yum, Yum
 achievement.plus:iApple.desc=An delicious and (not literally) infinity apple!
 achievement.plus:breakB=Even the unbreakable can be broken
@@ -58,13 +58,15 @@ tooltip.sanic.desc=SONIC SPEED
 #
 #NEI
 crafting.abs=Absolute Crafting Shaped
+crafting.abs.shapeless=Absolute Crafting Shapeless
 #
 #Misc
 itemGroup.plus=Plus Mod
 enchantment.level.20=XX
 enchantment.level.100=C
 container.compressor=Compressor
-tip.infinity=INFINITY
+tip.rInfinity=INFINITY
+tip.armor=Armor protection
 options.difficulty.peaceful=Disaster
 options.difficulty.easy=Weak
 options.difficulty.normal=Gave up

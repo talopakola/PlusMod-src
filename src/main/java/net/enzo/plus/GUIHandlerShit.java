@@ -14,7 +14,7 @@ public class GUIHandlerShit implements IGuiHandler {
 
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        if (ID == 0) // A FUCKING ERROR IS JUST BY I SWITCH SERVER WITH GUI
+        if (ID == 0) // A FUCKING ERROR IS JUST BY SWITCHING SERVER WITH GUI
             return new ContainerAbsoluteCraftingTable(player.inventory, world, x, y, z, (TileAbsoluteCraftingTable)world.getTileEntity(x,y,z));
         if (ID == 1)
             return new ContainerInfinityChest(player.inventory, (TileInfinityChest)world.getTileEntity(x,y,z));

@@ -16,6 +16,11 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class ToolHelper {
+    // I WANNA USE MY API SPITEFULFOX, PLS, LET ME USE THE COSMIC SHADERS BRO!!!!!!!
+    // I WANNA USE MY API SPITEFULFOX, PLS, LET ME USE THE COSMIC SHADERS BRO!!!!!!!
+    // I WANNA USE MY API SPITEFULFOX, PLS, LET ME USE THE COSMIC SHADERS BRO!!!!!!!
+    // I WANNA USE MY API SPITEFULFOX, PLS, LET ME USE THE COSMIC SHADERS BRO!!!!!!!
+    // I WANNA USE MY API SPITEFULFOX, PLS, LET ME USE THE COSMIC SHADERS BRO!!!!!!!
     private static Random randy = new Random();
 
     public static void removeBlocksInIteration(EntityPlayer player, ItemStack stack, World world, int x, int y, int z, int xs, int ys, int zs, int xe, int ye, int ze, Block block, Material[] materialsListing, boolean silk, int fortune, boolean dispose) {
@@ -110,4 +115,13 @@ public class ToolHelper {
         entityitem.delayBeforeCanPickup = 10;
         world.spawnEntityInWorld(entityitem);
     }
+
+    // No one will be here in the final, right? So I'll write in Portuguese now.
+    /*
+    * Cara, não to mais aguentando fazer esse mod não, sério.
+    * Tá difícil, o SpitefulFox ainda não me respondeu, se posso usar o shaders dele.
+    * Cara, tenho uma API inteira feito pra agilizar o processo dos shaders pra mim, mas não se ele vai me permitir usar.
+    * EU QUERO USAR MINHA API SPITEFULFOX, POR FAVOR, DEIXA EU USAR ISSO MANO.
+    * I WANNA USE MY API SPITEFULFOX, PLS, LET ME USE THE COSMIC SHADERS BRO!!!!!!!
+    * */
 }

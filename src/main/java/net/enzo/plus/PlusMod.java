@@ -48,8 +48,6 @@ public class PlusMod
     public void earlyNightmare(FMLPreInitializationEvent event)
     {
         instance = this;
-        ClientRegistry.bindTileEntitySpecialRenderer(TileInfinityChest.class, new TileInfinityChestRenderer());
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockInfintiyChest.instance), new InfinityChestRenderItem());
         Config.letsConfigurate(event.getSuggestedConfigurationFile());
         InfinityItems.letsRegisterEmAll();
         InfinityBlocks.consumeUniverse();

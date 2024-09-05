@@ -1,3 +1,10 @@
+# 1.4
+1. Infinity armor now have "+INFINITY Armor protection" tooltip.
+2. Modified Creative Storage Upgrade (from Storage Drawers) crafting.
+3. Absolute Crafting Table now have some bright.
+4. Now Infinity Sword have a functional farm function, it gives your 696969 xp for every mob killed.
+5. Now, you can change the speed of Infinity Boots in config.
+
 # 1.3
 1. Infinity Armor received a buff in speed
 2. All Infinity tools now have +INFINITY damage

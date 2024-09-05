@@ -1,0 +1,33 @@
+[14:35:40] [main/INFO]: Setting user: Player765
+[14:35:44] [Client thread/INFO]: LWJGL Version: 2.9.1
+[14:35:57] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Avaritia, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:§9MrCrayfish's Furniture Mod, FMLFileResourcePack:Storage Drawers, FMLFileResourcePack:Plus Mod
+[14:36:00] [Sound Library Loader/INFO]: Sound engine started
+[14:36:02] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[14:36:02] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[14:36:04] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Avaritia, FMLFileResourcePack:MineTweaker 3, FMLFileResourcePack:§9MrCrayfish's Furniture Mod, FMLFileResourcePack:Storage Drawers, FMLFileResourcePack:Plus Mod
+[14:36:05] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[14:36:05] [Client thread/INFO]: Created: 512x256 textures/items-atlas
+[14:36:06] [Sound Library Loader/INFO]: Sound engine started
+[14:36:34] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[14:36:34] [Server thread/INFO]: Generating keypair
+[14:36:35] [Server thread/INFO]: Preparing start region for level 0
+[14:36:37] [Server thread/INFO]: Changing view distance to 4, from 10
+[14:36:37] [Server thread/INFO]: Player765[local:E:59776e72] logged in with entity id 390 at (67.69999998807907, 78.23641100844485, 26.30000001192093)
+[14:36:37] [Server thread/INFO]: Player765 entrou no jogo
+[14:36:37] [Server thread/INFO]: Player765 adquiriu a conquista [You've been installed!]
+[14:36:41] [Client thread/INFO]: [CHAT] Player765 adquiriu a conquista [You've been installed!]
+[14:36:41] [Client thread/INFO]: [CHAT] §bThank you for downloading MrCrayfish's Furniture Mod.
+[14:36:41] [Client thread/INFO]: [CHAT] Make sure you check out the wiki! http://mrcrayfishs-furniture-mod.wikia.com/
+[14:36:41] [Client thread/INFO]: [CHAT] Version 1.0.7.48 of CodeChickenCore is available
+[14:36:41] [Client thread/INFO]: [CHAT] Version 1.0.5.120 of NotEnoughItems is available
+[14:36:46] [Server thread/INFO]: Player765 adquiriu a conquista [Fazendo Logística]
+[14:36:47] [Client thread/INFO]: [CHAT] Player765 adquiriu a conquista [Fazendo Logística]
+[14:37:02] [Client thread/INFO]: Stopping!
+[14:37:02] [Server thread/INFO]: Stopping server
+[14:37:02] [Server thread/INFO]: Saving players
+[14:37:03] [Server thread/INFO]: Saving worlds
+[14:37:03] [Server thread/INFO]: Saving chunks for level 'yare yare dawa'/Overworld
+[14:37:03] [Server thread/INFO]: Saving chunks for level 'yare yare dawa'/Nether
+[14:37:03] [Server thread/INFO]: Saving chunks for level 'yare yare dawa'/The End
+[14:37:03] [Client Shutdown Thread/INFO]: Stopping server
+[14:37:03] [Client Shutdown Thread/INFO]: Saving players

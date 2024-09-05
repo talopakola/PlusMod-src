@@ -23,7 +23,7 @@ public class ItemInfinityShovel extends ItemSpade {
 
     public ItemInfinityShovel() {
         super(opSpade);
-        setUnlocalizedName("infinity_shovel");
+        setUnlocalizedName("infinity_rshovel");
         setTextureName("plus:infinity_shovel");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);

@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Lumberjack {
     // GO FUCK YOURSELF LUMBERJACK LOG SYSTEM
-    public static final Logger logger = LogManager.getLogger("Avaritia");
+    public static final Logger logger = LogManager.getLogger("plus");
 
     public static void log(Level level, Throwable e, Object message) {
         log(level, message);

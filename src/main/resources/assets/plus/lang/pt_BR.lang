@@ -5,11 +5,11 @@ item.star_ingot.name=Barra de Estrela
 item.star_core.name=Núcleo de Estrela
 item.reality_cristal.name=Cristal da realidade
 item.existence_ingot.name=Bara da existência
-item.infinity_sword.name=Deus dos Deuses
-item.infinity_pickaxe.name=Comedor de Realidades
-item.infinity_axe.name=O Medo de Mundos
-item.infinity_shovel.name=Destruídor de Planetas
-item.infinity_bow.name=Arco Infernal
+item.infinity_rsword.name=Deus dos Deuses
+item.infinity_rpickaxe.name=Comedor de Realidades
+item.infinity_raxe.name=O Medo de Mundos
+item.infinity_rshovel.name=Destruídor de Planetas
+item.infinity_rbow.name=Arco Infernal
 item.infinity_armor_0.name=Capacete do Infinito
 item.infinity_armor_1.name=Peitoral do Infinito
 item.infinity_armor_2.name=Calças do Infinito
@@ -58,13 +58,15 @@ tooltip.sanic.desc=VELOCIDADE SÔNICA
 #
 #NEI
 crafting.abs=Absolute Crafting Shaped
+crafting.abs.shapeless=Absolute Crafting Shapeless
 #
 #Misc
 itemGroup.plus=Plus Mod
 enchantment.level.20=XX
 enchantment.level.100=C
 container.compressor=Compressor
-tip.infinity=INFINITO
+tip.rInfinity=INFINITO
+tip.armor=Proteção de armadura
 options.difficulty.peaceful=Disastre
 options.difficulty.easy=Fraco
 options.difficulty.normal=Desista

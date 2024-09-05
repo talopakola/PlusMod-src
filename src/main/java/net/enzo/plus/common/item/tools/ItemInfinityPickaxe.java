@@ -27,7 +27,7 @@ public class ItemInfinityPickaxe extends ItemPickaxe {
 
     public ItemInfinityPickaxe() {
         super(opPick);
-        setUnlocalizedName("infinity_pickaxe");
+        setUnlocalizedName("infinity_rpickaxe");
         setTextureName("plus:infinity_pickaxe");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);

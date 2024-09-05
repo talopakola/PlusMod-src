@@ -24,6 +24,7 @@ public class BlockAbsoluteCraftingTable extends BlockContainer {
         setBlockName("absolute_craft");
         setBlockTextureName("plus:absolute_craft");
         setHarvestLevel("pickaxe", 3);
+        setLightLevel(5F);
         setCreativeTab(PlusMod.tab);
     }
 

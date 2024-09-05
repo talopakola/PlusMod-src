@@ -205,7 +205,7 @@ public class ItemInfinityArmor extends ItemArmor {
                         if (player.onGround || flying || swimming) {
                             boolean sneaking = player.isSneaking();
 
-                            float speed = 0.23f
+                            float speed = Config.bootsSpeed //MORE BUFFS HAHAAHAHAHAHAHAHAH
                                     * (flying ? 1.1f : 1.0f)
                                     * (sneaking ? 0.1f : 1.0f);
 

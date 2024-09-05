@@ -2,6 +2,7 @@ package net.enzo.plus.common.item.tools;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.enzo.plus.Lumberjack;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.Config;
 import net.enzo.plus.common.entities.EntityImmortalItem;
@@ -37,7 +38,7 @@ public class ItemInfinitySword extends ItemSwordCooler {
     private static final ToolMaterial opSword = EnumHelper.addToolMaterial("INFINITY_SWORD", 32, 9999, 9999F, Float.MAX_VALUE /*Useless, but exists :D*/, 32);
     public ItemInfinitySword() {
         super(opSword);
-        setUnlocalizedName("infinity_sword");
+        setUnlocalizedName("infinity_rsword");
         setTextureName("plus:infinity_sword");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);
@@ -55,7 +56,10 @@ public class ItemInfinitySword extends ItemSwordCooler {
             for (int i = 0; i < randy.nextInt(30); i++) {
                 world.spawnEntityInWorld(new EntityLightningBolt(world, player.posX, player.posY, player.posZ));
             }
-            //player.swingItem();
+            Lumberjack.info("Farmer");
+            player.swingItem();
+        } else {
+            stack.getItemUseAction();
         }
 
         return stack;
@@ -106,14 +110,15 @@ public class ItemInfinitySword extends ItemSwordCooler {
                 if (InfinityItems.isPlus(pvp)) {
                     victim.attackEntityFrom(new DamageSourceInfinity(player), 4.0F);
                 }
-            if (stack.getTagCompound().getBoolean("farm")) {
-                EntityPlayer player2 = (EntityPlayer)player;
-                player2.addExperienceLevel(696969);
-                for (int i = 0; i < 43; i++) {
-                    victim.worldObj.spawnEntityInWorld(new EntityLightningBolt(victim.worldObj, victim.posX, victim.posY, victim.posZ));
-                }
-            }
             return true;
+        }
+        if (stack.getTagCompound().getBoolean("farm")) {
+            EntityPlayer player2 = (EntityPlayer)player;
+            player2.addExperienceLevel(696969);
+            Lumberjack.info("Farmer: " + stack.getTagCompound().getBoolean("farm")); // Finally I'm using this log thing for something useful
+            for (int i = 0; i < 5 /*to remember: put 43 lightning bolts to spawn in a single block, can lag the game XD*/; i++) {
+                victim.worldObj.spawnEntityInWorld(new EntityLightningBolt(victim.worldObj, victim.posX, victim.posY, victim.posZ));
+            }
         }
         victim.func_110142_aN().func_94547_a(new DamageSourceInfinity(player), victim.getHealth(), victim.getHealth());
         victim.setHealth(0);
@@ -121,30 +126,31 @@ public class ItemInfinitySword extends ItemSwordCooler {
         return true;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void getSubItems(Item item, CreativeTabs tabs, List list) {
         ItemStack sword = new ItemStack(this);
         if (!Config.boringSword)
             sword.addEnchantment(Enchantment.looting, 100);
-        else
-            System.out.println("Plus: Shit PC :D");
+        //else
+            //System.out.println("Plus: Shit PC :D");
         list.add(sword);
     }
 
     @Override
     public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
         if(!entity.worldObj.isRemote && entity instanceof EntityPlayer) {
+            if (stack.getTagCompound().getBoolean("farm")) {
+                player.addExperienceLevel(696969);
+                for (int i = 0; i < 43; i++) {
+                    entity.worldObj.spawnEntityInWorld(new EntityLightningBolt(entity.worldObj, entity.posX, entity.posY, entity.posZ));
+                }
+            }
             EntityPlayer victim = (EntityPlayer)entity;
             if(victim.capabilities.isCreativeMode && !victim.isDead && victim.getHealth() > 0 && !InfinityItems.isPlus(victim) && !stack.getTagCompound().getBoolean("farm")){
                 victim.func_110142_aN().func_94547_a(new DamageSourceInfinity(player), victim.getHealth(), victim.getHealth());
                 victim.setHealth(0);
                 victim.onDeath(new EntityDamageSource("infinity", player));
-                if (stack.getTagCompound().getBoolean("farm")) {
-                    player.addExperienceLevel(696969);
-                    for (int i = 0; i < 43; i++) {
-                        entity.worldObj.spawnEntityInWorld(new EntityLightningBolt(entity.worldObj, entity.posX, entity.posY, entity.posZ));
-                    }
-                }
                 //player.addStat(Achievements.creative_kill, 1);
                 return true;
 

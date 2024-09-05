@@ -22,7 +22,7 @@ public class ItemInfinityAxe extends ItemAxe {
     private static final Item.ToolMaterial opAxe = EnumHelper.addToolMaterial("INFINITY_AXE", 9999, 9999, 999999F, 999.0F, 32);
     public ItemInfinityAxe() {
         super(opAxe);
-        setUnlocalizedName("infinity_axe");
+        setUnlocalizedName("infinity_raxe");
         setTextureName("plus:infinity_axe");
         setCreativeTab(PlusMod.tab);
         setMaxDamage(0);

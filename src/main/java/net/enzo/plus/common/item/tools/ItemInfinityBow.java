@@ -25,7 +25,7 @@ public class ItemInfinityBow extends Item {
     public ItemInfinityBow() {
         this.maxStackSize = 1;
         this.setMaxDamage(9999);
-        this.setUnlocalizedName("infinity_bow");
+        this.setUnlocalizedName("infinity_rbow");
         this.setTextureName("plus:infinity_bow");
         this.setCreativeTab(PlusMod.tab);
     }

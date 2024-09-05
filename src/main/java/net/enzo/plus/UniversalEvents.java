@@ -3,14 +3,17 @@ package net.enzo.plus;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.enzo.plus.client.ColorsText;
 import net.enzo.plus.common.item.InfinityItems;
+import net.enzo.plus.common.item.ItemInfinityArmor;
 import net.enzo.plus.common.item.tools.*;
+import net.enzo.plus.common.item.util.ItemSwordCooler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
@@ -23,6 +26,7 @@ import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
 
+import java.awt.event.KeyEvent;
 import java.util.Random;
 
 public class UniversalEvents {
@@ -34,11 +38,24 @@ public class UniversalEvents {
             for(int x = 0;x < event.toolTip.size();x++){
                 if(event.toolTip.get(x).contains(StatCollector.translateToLocal("attribute.name.generic.attackDamage"))
                         || event.toolTip.get(x).contains(StatCollector.translateToLocal("Attack Damage"))){
-                    event.toolTip.set(x, EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.infinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
+                    event.toolTip.set(x, EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
                     return;
                 }
             }
         }
+        if (event.itemStack.getItem() instanceof ItemInfinityArmor) {
+            event.toolTip.add(EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + EnumChatFormatting.RESET + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("tip.armor"));
+        }
+
+        /*if (event.itemStack.getItem() instanceof Item || event.itemStack.getItem() instanceof ItemSpade || event.itemStack.getItem() instanceof ItemSword || event.itemStack.getItem() instanceof ItemAxe || event.itemStack.getItem() instanceof ItemPickaxe || event.itemStack.getItem() instanceof ItemHoe || event.itemStack.getItem() instanceof ItemSwordCooler) {
+            Item item = event.itemStack.getItem();
+            if (GuiScreen.isShiftKeyDown()) {
+                event.toolTip.add(EnumChatFormatting.GOLD + "Rarity: " + EnumChatFormatting.RESET + "" + item.getRarity(new ItemStack(item)).rarityColor + item.getRarity(new ItemStack(item)).rarityName);
+                Lumberjack.info("Seeing it's rarity!");
+            }
+        }*/
+
+        //Idea for a new mod :D
     }
 
     @SubscribeEvent
@@ -174,6 +191,7 @@ public class UniversalEvents {
             if (player.inventory.hasItem(InfinityItems.infinity_bow) && !player.capabilities.isCreativeMode && !player.isDead && player.getHealth() >= 0 && !InfinityItems.isPlus(player)) {
                 player.addChatMessage(new ChatComponentText(EnumChatFormatting.GRAY + " " + EnumChatFormatting.ITALIC + " " + EnumChatFormatting.BOLD + StatCollector.translateToLocal("tex.chat.un")));;
                     player.setHealth(0 /*player.getMaxHealth() - (int) Long.MAX_VALUE*/);
+                    // To remember: Set health to less than -2.2250738585072014e-308 crash the game!
                     player.setDead();
                     player.setScore((int) Long.MIN_VALUE);
                     //player.performHurtAnimation();

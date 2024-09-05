@@ -25,10 +25,10 @@ public class ClientProxy extends CommonProxy {
         RenderHellArrow hellIscoming = new RenderHellArrow();
         RenderingRegistry.registerEntityRenderingHandler(EntityHellArrow.class, hellIscoming);
         RenderingRegistry.registerEntityRenderingHandler(EntityHellSubArrow.class, hellIscoming);
-       /*
-        * TileInfinityChestRenderer r = new TileInfinityChestRenderer();
-        * RenderingRegistry.registerBlockHandler(99203, (ISimpleBlockRenderingHandler) r);
-        */
+
+        ClientRegistry.bindTileEntitySpecialRenderer(TileInfinityChest.class, new TileInfinityChestRenderer());
+
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockInfintiyChest.instance), new InfinityChestRenderItem());
     }
 
     @Override
