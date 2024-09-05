@@ -1,11 +1,11 @@
 todo:
 -Main
-    More lore: F
-    Made a ̶P̶e̶r̶f̶e̶c̶t̶ ̶c̶o̶p̶y̶ ̶o̶f̶ ̶A̶v̶a̶r̶i̶t̶i̶a̶ mod look like my inspiration (Avaritia): F
-    More compatibilities: *F*
+    More lore: T
+    Made a ̶P̶e̶r̶f̶e̶c̶t̶ ̶c̶o̶p̶y̶ ̶o̶f̶ ̶A̶v̶a̶r̶i̶t̶i̶a̶ mod look like my inspiration (Avaritia): Almost T
+    More compatibilities: T
     Animate main tools:
-        Sword: F
-        Axe: F
-        Pickaxe: F
-        Shovel: F
+        Sword: T
+        Axe: T
+        Pickaxe: T
+        Shovel: T
     Config: T
