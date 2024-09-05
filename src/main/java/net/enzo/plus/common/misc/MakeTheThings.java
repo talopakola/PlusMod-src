@@ -37,6 +37,7 @@ public class MakeTheThings {
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_apple), "EEEEEEEEE", "EEEEEEEEE", "EEEEEEEEE", "EEEAAAEEE", "EEEAAAEEE", "EEEAAAEEE", "EEEEEEEEE", "EEEEEEEEE", "EEEEEEEEE", 'E', InfinityItems.star, 'A', new ItemStack(Items.golden_apple, 1, 1));
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_bow), "    SL   ", "   S L   ", "  D  L   ", " D   L   ", "C    B   ", " D   L   ", "  D  L   ", "   S L   ", "    SL   ", 'S', InfinityItems.existence, 'L', Blocks.wool, 'C', InfinityItems.realityCristal, 'D', InfinityItems.star_core, 'B', InfinityBlocks.star);
         AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityBlocks.coke), "OOOOOOOOO","OOOOOOOOO","OOOOOOOOO","OOXXXXXOO","OOXXXXXOO","OOXXXXXOO","OOOOOOOOO","OOOOOOOOO","OOOOOOOOO", 'O', InfinityItems.realityCristal, 'X', Blocks.chest);
+        AbsoluteCraftingManager.getInstance().addRecipe(new ItemStack(InfinityItems.infinity_hoe), " IIID    ", "IIIII    ", " IIII    ", "    D    ", "    D    ", "    D    ", "    D    ", "    D    ", "    S    ", 'I', InfinityItems.existence, 'D', InfinityItems.realityCristal, 'S', InfinityItems.star);
         Lumberjack.info(AbsoluteCraftingManager.getInstance().getRecipeList());
     }
 }

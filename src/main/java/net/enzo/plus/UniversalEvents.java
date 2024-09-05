@@ -44,7 +44,12 @@ public class UniversalEvents {
             }
         }
         if (event.itemStack.getItem() instanceof ItemInfinityArmor) {
+            event.toolTip.add("");
             event.toolTip.add(EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + EnumChatFormatting.RESET + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("tip.armor"));
+        }
+        if (event.itemStack.getItem() instanceof  ItemInfinityHoe) {
+            event.toolTip.add("");
+            event.toolTip.add(EnumChatFormatting.BLUE + "+" + ColorsText.rainbow(StatCollector.translateToLocal("tip.rInfinity")) + " " + EnumChatFormatting.BLUE + StatCollector.translateToLocal("attribute.name.generic.attackDamage"));
         }
 
         /*if (event.itemStack.getItem() instanceof Item || event.itemStack.getItem() instanceof ItemSpade || event.itemStack.getItem() instanceof ItemSword || event.itemStack.getItem() instanceof ItemAxe || event.itemStack.getItem() instanceof ItemPickaxe || event.itemStack.getItem() instanceof ItemHoe || event.itemStack.getItem() instanceof ItemSwordCooler) {

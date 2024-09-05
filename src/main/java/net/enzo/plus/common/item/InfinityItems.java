@@ -31,6 +31,7 @@ public class InfinityItems {
     public static Item infinity_axe;
     public static Item infinity_shovel;
     public static Item infinity_bow;
+    public static Item infinity_hoe;
 
     public static Item infinity_helmet;
     public static Item infinity_chest;
@@ -59,6 +60,7 @@ public class InfinityItems {
         infinity_pickaxe = butSetItFirst(new ItemInfinityPickaxe(), "infinity_pickaxe");
         infinity_axe = butSetItFirst(new ItemInfinityAxe(), "infinity_axe");
         infinity_shovel = butSetItFirst(new ItemInfinityShovel(), "infinity_shovel");
+        infinity_hoe = butSetItFirst(new ItemInfinityHoe(), "Infinity_Hoe");
         infinity_bow = butSetItFirst(new ItemInfinityBow(), "Infinity_Bow");
 
         infinity_helmet = butSetItFirst(new ItemInfinityArmor(0), "infinity_armor_0");

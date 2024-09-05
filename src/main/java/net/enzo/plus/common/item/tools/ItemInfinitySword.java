@@ -134,6 +134,7 @@ public class ItemInfinitySword extends ItemSwordCooler {
             sword.addEnchantment(Enchantment.looting, 100);
         //else
             //System.out.println("Plus: Shit PC :D");
+        // Lol, why I did this?
         list.add(sword);
     }
 

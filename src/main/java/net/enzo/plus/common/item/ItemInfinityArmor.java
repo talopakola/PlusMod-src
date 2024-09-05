@@ -234,7 +234,10 @@ public class ItemInfinityArmor extends ItemArmor {
                 String key = playerKey(player);
 
                 if (playersWithFoot.contains(key)) {
-                    player.motionY += 0.6f; // BUFFS HAHAHAHAHAHAHAHAH
+                    player.motionY += 0.9f; // BUFFS HAHAHAHAHAHAHAHAH
+                    //Ehhh, players can configure this?
+                    //No
+                    //I have to treat my schizophrenia quickly
                 }
             }
         }
