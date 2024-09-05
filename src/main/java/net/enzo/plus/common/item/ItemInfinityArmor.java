@@ -106,6 +106,7 @@ public class ItemInfinityArmor extends ItemArmor {
         return InfinityItems.infinity;
     }
 
+    @SuppressWarnings({"unchecked", "rawTypes"})
     @Override
     public void addInformation(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List tooltip, boolean sex) {
         if (slot == 3) {

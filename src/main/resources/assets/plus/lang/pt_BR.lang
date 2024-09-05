@@ -17,6 +17,10 @@ item.infinity_armor_2.name=Calças do Infinito
 item.infinity_armor_3.name=Botas do Infinito
 item.infinity_apple.name=Maçã do Infinito
 item.infinity_banana.name=Banana do Infinito
+item.plus_nugget.existence_nugget.name=Pepita da Existência
+item.plus_nugget.reality_nugget.name=Pepita da Realidade
+item.plus_nugget.star_nugget.name=Pepita de Estrela
+item.plus_nugget.mixed_nugget.name=Pepita Misturada
 #
 #Tiles
 tile.absolute_craft.name=Mesa de Trabalho Absoluta
@@ -58,6 +62,7 @@ tooltip.sword.desc=Criada para uma possível corrupção... Você escolhe, destr
 tooltip.sanic.desc=VELOCIDADE SÔNICA
 tooltip.blockReality.desc=Toda a realidade, em um pedaço de cubo...
 tooltip.Infinity_Apple.desc=O Infinito até que é gostoso!
+tooltip.existence_nugget.desc=Lágrimas de anjos...
 #
 #NEI
 crafting.abs=Absolute Crafting Shaped

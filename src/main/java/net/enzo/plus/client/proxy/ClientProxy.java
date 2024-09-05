@@ -4,10 +4,9 @@ import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.enzo.plus.client.render.InfinityChestRenderItem;
 import net.enzo.plus.client.render.RenderHellArrow;
-import net.enzo.plus.common.blocks.BlockInfintiyChest;
+import net.enzo.plus.common.blocks.BlockInfinityChest;
 import net.enzo.plus.common.entities.EntityHellArrow;
 import net.enzo.plus.common.entities.EntityHellSubArrow;
-import net.enzo.plus.common.item.util.ItemBlockInfinityChest;
 import net.enzo.plus.common.proxy.CommonProxy;
 import net.enzo.plus.common.tiles.TileInfinityChest;
 import net.enzo.plus.common.tiles.TileInfinityChestRenderer;
@@ -29,7 +28,7 @@ public class ClientProxy extends CommonProxy {
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileInfinityChest.class, new TileInfinityChestRenderer());
 
-        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockInfintiyChest.instance), new InfinityChestRenderItem());
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockInfinityChest.instance), new InfinityChestRenderItem());
     }
 
     @Override

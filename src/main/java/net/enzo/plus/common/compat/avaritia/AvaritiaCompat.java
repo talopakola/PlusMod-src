@@ -15,6 +15,6 @@ public class AvaritiaCompat {
         Grinder.catalyst.getInput().add(new ItemStack(InfinityItems.star));
         Grinder.catalyst.getInput().add(new ItemStack(InfinityItems.star_core));
 
-        ExtremeCraftingManager.getInstance().addShapelessRecipe(new ItemStack(InfinityItems.infinity_banana), new ItemStack(LudicrousItems.resource, 1, 2), new ItemStack(Blocks.pumpkin), new ItemStack(Blocks.pumpkin), new ItemStack(Blocks.cactus), new ItemStack(Blocks.cactus), new ItemStack(InfinityBlocks.mixedBlock), new ItemStack(InfinityBlocks.mixedBlock), new ItemStack(InfinityBlocks.star), new ItemStack(InfinityBlocks.star), new ItemStack(Items.fish), new ItemStack(Items.fish), new ItemStack(LudicrousItems.singularity, 1, 0));
+        ExtremeCraftingManager.getInstance().addShapelessRecipe(new ItemStack(InfinityItems.infinity_banana), new ItemStack(LudicrousItems.resource, 1, 2), new ItemStack(Blocks.pumpkin), new ItemStack(Blocks.pumpkin), new ItemStack(Blocks.cactus), new ItemStack(Blocks.cactus), new ItemStack(InfinityBlocks.mixedBlock), new ItemStack(InfinityBlocks.mixedBlock), new ItemStack(InfinityBlocks.star), new ItemStack(InfinityBlocks.star), new ItemStack(Items.fish), new ItemStack(Items.fish), new ItemStack(LudicrousItems.singularity, 1, 0), new ItemStack(LudicrousItems.singularity, 1, 1), new ItemStack(LudicrousItems.singularity, 1, 2), new ItemStack(LudicrousItems.singularity, 1, 3), new ItemStack(LudicrousItems.singularity, 1, 4));
     }
 }

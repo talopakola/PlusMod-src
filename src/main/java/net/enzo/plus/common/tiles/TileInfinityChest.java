@@ -3,9 +3,8 @@ package net.enzo.plus.common.tiles;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.enzo.plus.common.Config;
-import net.enzo.plus.common.blocks.BlockInfintiyChest;
+import net.enzo.plus.common.blocks.BlockInfinityChest;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ContainerChest;
 import net.minecraft.inventory.IInventory;
@@ -14,11 +13,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ResourceLocation;
 
-import javax.annotation.Nonnull;
 import java.util.Iterator;
 import java.util.List;
 
@@ -354,7 +350,7 @@ public class TileInfinityChest extends TileEntity implements IInventory {
         else
         {
             Block block = this.worldObj.getBlock(p_145977_1_, p_145977_2_, p_145977_3_);
-            return block instanceof BlockInfintiyChest && ((BlockInfintiyChest)block).field_149956_a == this.func_145980_j();
+            return block instanceof BlockInfinityChest && ((BlockInfinityChest)block).field_149956_a == this.func_145980_j();
         }
     }
     @Override
@@ -488,7 +484,7 @@ public class TileInfinityChest extends TileEntity implements IInventory {
 
     @Override
     public void closeInventory() {
-        if (this.getBlockType() instanceof BlockInfintiyChest)
+        if (this.getBlockType() instanceof BlockInfinityChest)
         {
             --this.numPlayersUsing;
             this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord, this.getBlockType(), 1, this.numPlayersUsing);
@@ -512,12 +508,12 @@ public class TileInfinityChest extends TileEntity implements IInventory {
     {
         if (this.cachedChestType == -1)
         {
-            if (this.worldObj == null || !(this.getBlockType() instanceof BlockInfintiyChest))
+            if (this.worldObj == null || !(this.getBlockType() instanceof BlockInfinityChest))
             {
                 return 0;
             }
 
-            this.cachedChestType = ((BlockInfintiyChest)this.getBlockType()).field_149956_a;
+            this.cachedChestType = ((BlockInfinityChest)this.getBlockType()).field_149956_a;
         }
 
         return this.cachedChestType;

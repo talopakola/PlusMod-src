@@ -36,6 +36,7 @@ public class ItemExistenceIngot extends Item {
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
         tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("lore.existence.desc"));
+        // Lore, lol
     }
 
     @Override

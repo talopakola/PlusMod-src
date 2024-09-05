@@ -3,16 +3,11 @@ package net.enzo.plus.common.item;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.enzo.plus.PlusMod;
 import net.enzo.plus.common.Config;
-import net.enzo.plus.common.blocks.BlockInfintiyChest;
-import net.enzo.plus.common.blocks.BlockReality;
 import net.enzo.plus.common.item.food.ItemInfinityApple;
 import net.enzo.plus.common.item.tools.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.EnumChatFormatting;
@@ -28,6 +23,15 @@ public class InfinityItems {
     public static Item star_core;
     public static Item realityCristal;
     public static Item existence;
+
+    /*
+     * 0 = Existence
+     * 1 = Reality
+     * 2 = Star
+     * 3 = Mixed
+     * */
+    public static Item nugget;
+
     public static Item infinity_sword;
     public static Item infinity_pickaxe;
     public static Item infinity_axe;
@@ -52,6 +56,8 @@ public class InfinityItems {
         star_core = butSetItFirst(new ItemStarCore(), "star_core");
         realityCristal = butSetItFirst(new ItemRealityCristal(), "reality_cristal");
         existence = butSetItFirst(new ItemExistenceIngot(), "existence_ingot");
+        nugget = butSetItFirst(new ItemNugget(), "Plus_Nugget");
+
         if (Config.craftOnly)
             return;
 

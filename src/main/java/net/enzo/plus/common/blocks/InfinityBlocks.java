@@ -2,7 +2,6 @@ package net.enzo.plus.common.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.enzo.plus.common.Config;
-import net.enzo.plus.common.item.util.ItemBlockInfinityChest;
 import net.enzo.plus.common.item.util.ItemBlockReality;
 import net.enzo.plus.common.tiles.TileAbsoluteCraftingTable;
 import net.enzo.plus.common.tiles.TileInfinityChest;
@@ -25,7 +24,7 @@ public class InfinityBlocks {
         if (Config.craftOnly)
             return;
 
-        coke = GameRegistry.registerBlock(new BlockInfintiyChest(), "Infinity_Chest");
+        coke = GameRegistry.registerBlock(new BlockInfinityChest(), "Infinity_Chest");
         //comp = GameRegistry.registerBlock(new BlockCompressor(), "Plus_Compressor");
         // I gave up to try to do this, it simply crashes independent what I do.
         // I'm almost making a pact with the devil just to make this SHIT works

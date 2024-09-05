@@ -17,6 +17,10 @@ item.infinity_armor_2.name=Infinity Leggings
 item.infinity_armor_3.name=Infinity Boots
 item.infinity_apple.name=Infinity Apple
 item.infinity_banana.name=Infinity Banana
+item.plus_nugget.existence_nugget.name=Existence Nugget
+item.plus_nugget.reality_nugget.name=Reality Nugget
+item.plus_nugget.star_nugget.name=Star Nugget
+item.plus_nugget.mixed_nugget.name=Mixed Nugget
 #
 #Tiles
 tile.absolute_craft.name=Absolute Crafting Table
@@ -58,6 +62,7 @@ tooltip.sword.desc=Created to defense the peace from a possible corruption... Yo
 tooltip.sanic.desc=SONIC SPEED
 tooltip.blockReality.desc=All the reality, in a single piece of cube...
 tooltip.Infinity_Apple.desc=Infinity tastes good!
+tooltip.existence_nugget.desc=Angels tear...
 #
 #NEI
 crafting.abs=Absolute Crafting Shaped

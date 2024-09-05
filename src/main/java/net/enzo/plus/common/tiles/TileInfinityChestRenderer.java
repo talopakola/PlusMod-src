@@ -6,19 +6,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
-import net.enzo.plus.common.blocks.BlockInfintiyChest;
-
-import java.util.Random;
-
-import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL12.*;
+import net.enzo.plus.common.blocks.BlockInfinityChest;
 
 @SideOnly(Side.CLIENT)
 public class TileInfinityChestRenderer extends TileEntitySpecialRenderer {
@@ -49,11 +42,11 @@ public class TileInfinityChestRenderer extends TileEntitySpecialRenderer {
             Block block = p_147500_1_.getBlockType();
             i = p_147500_1_.getBlockMetadata();
 
-            if (block instanceof BlockInfintiyChest && i == 0)
+            if (block instanceof BlockInfinityChest && i == 0)
             {
                 try
                 {
-                    ((BlockInfintiyChest)block).func_149954_e(p_147500_1_.getWorldObj(), p_147500_1_.xCoord, p_147500_1_.yCoord, p_147500_1_.zCoord);
+                    ((BlockInfinityChest)block).func_149954_e(p_147500_1_.getWorldObj(), p_147500_1_.xCoord, p_147500_1_.yCoord, p_147500_1_.zCoord);
                 }
                 catch (ClassCastException e)
                 {

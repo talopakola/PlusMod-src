@@ -12,6 +12,7 @@
 11. Now, tooltips for the items have the correct formatting.
 12. Infinity Apple now gives potions for 1 day: Absorption, Regeneration, Haste, Strength, Resistance, Instant Health and Fire Resistance.
 13. Infinity Apple is infinity now.
+14. Now materials have nuggets.
 
 # 1.3
 1. Infinity Armor received a buff in speed
