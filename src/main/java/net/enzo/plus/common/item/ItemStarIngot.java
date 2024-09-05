@@ -3,10 +3,12 @@ package net.enzo.plus.common.item;
 import net.enzo.plus.PlusMod;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
 
 import java.util.List;
 
@@ -15,6 +17,11 @@ public class ItemStarIngot extends Item {
         setUnlocalizedName("star_ingot");
         setTextureName("plus:star_ingot");
         setCreativeTab(PlusMod.tab);
+    }
+
+    @Override
+    public EnumRarity getRarity(ItemStack p_77613_1_) {
+        return EnumRarity.rare;
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
@@ -26,12 +33,16 @@ public class ItemStarIngot extends Item {
     // Cool random function
     @Override
     public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
-        if (player.isSneaking()) {
-            entity.worldObj.createExplosion(entity, entity.posX,entity.posY,entity.posZ, 10.0F, true);
-        } else {
-            entity.setFire(Integer.MAX_VALUE);
-        }
-
         return true;
+    }
+
+    @Override
+    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+        if (player.isSneaking()) {
+            player.worldObj.createExplosion(player, player.posX,player.posY,player.posZ, 10.0F, true);
+        } else {
+            player.setFire(Integer.MAX_VALUE);
+        }
+        return stack;
     }
 }

@@ -8,12 +8,10 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.StatCollector;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -42,6 +40,37 @@ public class ItemNugget extends Item {
         }
     }
 
+    @Override
+    public boolean onDroppedByPlayer(ItemStack stack, EntityPlayer player) {
+        int meta = stack.getItemDamage();
+        if (meta == 0) {
+            World world = player.worldObj;
+            world.createExplosion(player, player.posX, player.posY, player.posZ, 10F, false);
+            player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "" + EnumChatFormatting.ITALIC + StatCollector.translateToLocal("chat.en.desc")));
+            // This was needed? No,
+            // this was funny? No,
+            // So why I did that?
+            // BC I'm the famous "Don Comédia", lol.
+
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public EnumRarity getRarity(ItemStack stack) {
+        int meta = stack.getItemDamage();
+        switch (meta){
+            case 0:
+            case 1:
+                return InfinityItems.infinity;
+            case 2:
+                return EnumRarity.rare;
+            default:
+                return EnumRarity.common;
+        }
+    }
+
     @SideOnly(Side.CLIENT)
     public IIcon getIconFromDamage(int dam) {
         return this.icons[dam % icons.length];
@@ -64,7 +93,7 @@ public class ItemNugget extends Item {
         return super.getUnlocalizedName() + "." + types[i];
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @SuppressWarnings({ "unchecked", "rawTypes" })
     @SideOnly(Side.CLIENT)
     @Override
     public void getSubItems(Item item, CreativeTabs tab, List list) {
