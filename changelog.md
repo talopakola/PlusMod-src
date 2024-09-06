@@ -1,3 +1,6 @@
+# 1.5
+1. Infinity Sword re-texture, to match the crafting.
+
 # 1.4
 1. Infinity armor now have "+INFINITY Armor protection" tooltip.
 2. Modified Creative Storage Upgrade (from Storage Drawers) crafting.

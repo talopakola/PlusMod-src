@@ -54,7 +54,7 @@ public class ItemInfinitySword extends ItemSwordCooler {
             for (int i = 0; i < randy.nextInt(30); i++) {
                 world.spawnEntityInWorld(new EntityLightningBolt(world, player.posX, player.posY, player.posZ));
             }
-            Lumberjack.info("Farmer");
+            Lumberjack.info("Farmer: " + tags.getBoolean("farm"));
             player.swingItem();
         } else {
             stack.getItemUseAction();
