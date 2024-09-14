@@ -1,5 +1,6 @@
 # 1.5
 1. Infinity Sword re-texture, to match the crafting.
+2. Infinity Bow buff!
 
 # 1.4
 1. Infinity armor now have "+INFINITY Armor protection" tooltip.

@@ -74,22 +74,13 @@ public class ItemInfinityBow extends Item {
 
             int k = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, stack);
 
-            if (k > 0)
-            {
-                entityarrow.setDamage(entityarrow.getDamage() + k * 1 + 1);
-            }
+            entityarrow.setDamage(entityarrow.getDamage() + k * 1 + 1);
 
             int l = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, stack);
 
-            if (l > 0)
-            {
-                entityarrow.setKnockbackStrength(l);
-            }
+            entityarrow.setKnockbackStrength(l);
 
-            if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, stack) > 0)
-            {
-                entityarrow.setFire(100);
-            }
+            entityarrow.setFire(100);
 
             stack.damageItem(1, player);
             world.playSoundAtEntity(player, "random.bow", 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
