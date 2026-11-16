@@ -1,0 +1,84 @@
+#Items
+item.itemTest.name=Plus Debug (no function)
+item.mixed_ingot.name=Mixed Ingot
+item.star_ingot.name=Star Ingot
+item.star_core.name=Star Core
+item.reality_cristal.name=Reality Cristal
+item.existence_ingot.name=Existence Ingot
+item.infinity_rsword.name=God of Gods
+item.infinity_rpickaxe.name=Realities Eater
+item.infinity_raxe.name=The Worlds Fear
+item.infinity_rshovel.name=Planets Destroyer
+item.infinity_hoe.name=Resurrection of the Earth
+item.infinity_rbow.name=Hell Bow
+item.infinity_armor_0.name=Infinity Helmet
+item.infinity_armor_1.name=Infinity Chestplate
+item.infinity_armor_2.name=Infinity Leggings
+item.infinity_armor_3.name=Infinity Boots
+item.infinity_apple.name=Infinity Apple
+item.infinity_banana.name=Infinity Banana
+item.plus_nugget.existence_nugget.name=Existence Nugget
+item.plus_nugget.reality_nugget.name=Reality Nugget
+item.plus_nugget.star_nugget.name=Star Nugget
+item.plus_nugget.mixed_nugget.name=Mixed Nugget
+#
+#Tiles
+tile.absolute_craft.name=Absolute Crafting Table
+tile.mixed_block.name=Mixed Block
+tile.tile_star_core.name=Star Core Block
+tile.reality.name=Reality Block
+tile.infinity_chest.name=Infinity Chest
+#
+#Achievement
+achievement.plus:mixed=The start of a nightmare.
+achievement.plus:mixed.desc=You crafted your first Mixed Ingot... The first of many.
+achievement.plus:star=Star and it's existence
+achievement.plus:star.desc=You crafted a Star Ingot
+achievement.plus:abs=Craft and suffering
+achievement.plus:abs.desc=You crafted a Absolute Crafting Table
+achievement.plus:core=Very massive
+achievement.plus:core.desc=You crafted a Star Core
+achievement.plus:coke=INFINITY STORAGE
+achievement.plus:coke.desc=You crafted a Infinity Chest
+achievement.plus:reality=The reality... In your hand...
+achievement.plus:reality.desc=You crafted a Reality Cristal
+achievement.plus:existence=§r"Made in §kHEAVEN§r"
+achievement.plus:existence.desc=You crafted the only God's fear...
+achievement.plus:banana=Banana?
+achievement.plus:banana.desc=Caution with this, can (literally) kill your hungry
+achievement.plus:iApple=Yum, Yum
+achievement.plus:iApple.desc=An delicious and infinity apple!
+achievement.plus:breakB=Even the unbreakable can be broken
+achievement.plus:breakB.desc=Break and pickup a bedrock
+#
+#Tooltip
+tooltip.mixed.desc=A mix of every materials. You know, it can be powerful...
+tooltip.star.desc=Star consists in a mix of materials and itself, but now you have your own copy.
+tooltip.star_core.desc=Is day for some
+star.desc.color=CHAOS
+tooltip.reality.desc=The reality, in your hand... But, it's not finished yet.
+lore.existence.desc="In the start of existence, God created powerful materials, because, if some day it corrupt by the evil, it will exist a form to kill him and bring peace to the existence."
+tooltip.sword.desc=Created to defense the peace from a possible corruption... You choose, destroy everything, or save everything?
+tooltip.sanic.desc=SONIC SPEED
+tooltip.blockReality.desc=All the reality, in a single piece of cube...
+tooltip.Infinity_Apple.desc=Infinity tastes good!
+tooltip.existence_nugget.desc=God's tear...
+#
+#NEI
+crafting.abs=Absolute Crafting Shaped
+crafting.abs.shapeless=Absolute Crafting Shapeless
+#
+#Misc
+itemGroup.plus=Plus Mod
+enchantment.level.20=XX
+enchantment.level.100=C
+container.compressor=Compressor
+tip.rInfinity=INFINITY
+tip.armor=Armor protection
+options.difficulty.peaceful=Disaster
+options.difficulty.easy=Weak
+options.difficulty.normal=Gave up
+options.difficulty.hard=Hell
+options.difficulty.hardcore=HELL OF THE HELLS
+tex.chat.un=You're unworthy of my power.
+chat.en.desc=No escape.
