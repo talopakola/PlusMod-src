@@ -3,6 +3,7 @@
 2. Removed Infinity Sword farm function. It is useless, bruh~
 3. Removed 100 Looting in Infinity Sword.
 4. Removed nuclear explosion from Reality Block.
+5. gitignore ble
 
 # 1.5
 1. Infinity Sword re-texture, to match the crafting.
