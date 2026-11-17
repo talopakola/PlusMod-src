@@ -9,3 +9,8 @@ todo:
         Pickaxe: T
         Shovel: T
     Config: T
+    Now that we have shaders, apply shader's mask for all main Items:
+        Axe: F
+        Pickaxe: F
+        Shovel: F
+        Existence Ingot: F
