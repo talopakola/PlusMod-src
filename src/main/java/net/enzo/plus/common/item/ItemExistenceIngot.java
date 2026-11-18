@@ -23,20 +23,18 @@ public class ItemExistenceIngot extends Item {
 
     @Override
     public EnumRarity getRarity(ItemStack p_77613_1_) {
-        return InfinityItems.infinity; // Why?
-    } // To balance from other mods or IDK why.
+        return InfinityItems.infinity;
+    }
 
     @Override
     public String getItemStackDisplayName(ItemStack p_77653_1_) {
         return InfinityText.rainbow(StatCollector.translateToLocal("item.existence_ingot.name"));
-    } // FABULOSO -Talopakola
-    // Absolute cinema, tem como não -Davi
+    }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
         tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("lore.existence.desc"));
-        // Lore, lol
     }
 
     @Override

@@ -195,10 +195,4 @@ public class ItemInfinityBow extends Item {
     public EnumRarity getRarity(ItemStack p_77613_1_) {
         return InfinityItems.infinity;
     }
-
-    /*@Override
-    public String getUnlocalizedName() {
-        return ColorsText.rainbow(StatCollector.translateToLocal("item.infinity_bow.name")); // I need stop to use this on every item I like
-    } It not combine with the name
-    */
 }

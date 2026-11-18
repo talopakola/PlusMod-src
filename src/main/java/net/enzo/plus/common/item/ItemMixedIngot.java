@@ -13,10 +13,9 @@ public class ItemMixedIngot extends Item {
     public ItemMixedIngot() {
         this.setUnlocalizedName("mixed_ingot");
         this.setTextureName("plus:resources/mixed_ingot/mixed_ingot");
-        this.setCreativeTab(PlusMod.tab); // Materials tab?
-        // Is in Materials tab temporarily
+        this.setCreativeTab(PlusMod.tab);
     }
-    @SuppressWarnings({"unchecked", "rawtypes"})  // WHY INTELLIJ?
+    @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
         tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.mixed.desc"));

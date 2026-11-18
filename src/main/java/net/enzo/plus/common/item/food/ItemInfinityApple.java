@@ -34,7 +34,6 @@ public class ItemInfinityApple extends ItemFood {
         player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 1728000, 10));
         player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 1728000, 10));
         stack.stackSize++;
-        // For some weird reason, absorption are obfuscated, lol.
 
         super.onFoodEaten(stack, world, player);
     }

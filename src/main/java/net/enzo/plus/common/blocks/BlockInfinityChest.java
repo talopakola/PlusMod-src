@@ -42,9 +42,9 @@ public class BlockInfinityChest extends BlockContainer {
         setHarvestLevel("pickaxe", 2);
         this.field_149956_a = p_i45397_1_;
         this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
-    } // lolloololololololololololololol
+    }
     // It opens even with a block up it,
-    // I will call this a feature
+    // I'll call this a feature
     // I'll say "It's infinity chest, an end-game chest, powerful and IDK, so it doesn't follow the rules, it is the rules."!
     // All this cuz I'm too lazy to try to fix it
     // WHY THE ICON IS A NORMAL CHEST?

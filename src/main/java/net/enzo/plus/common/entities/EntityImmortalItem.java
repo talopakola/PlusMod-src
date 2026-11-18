@@ -120,15 +120,6 @@ public class EntityImmortalItem extends EntityItem{
             {
                 if (item != null)
                 {
-                    /*ItemExpireEvent event = new ItemExpireEvent(this, (item.getItem() == null ? 6000 : item.getItem().getEntityLifespan(item, worldObj)));
-                    if (MinecraftForge.EVENT_BUS.post(event))
-                    {
-                        lifespan += event.extraLife;
-                    }
-                    else
-                    {
-                        this.setDead();
-                    }*/
                 }
                 else
                 {

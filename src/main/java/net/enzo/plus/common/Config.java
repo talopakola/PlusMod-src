@@ -9,7 +9,7 @@ public class Config {
     public static boolean craftOnly = false;
     public static boolean boringChest = false;
     public static boolean infinityStorage = true;
-    public static boolean boringSword = false;
+    //public static boolean boringSword = false;
     public static boolean father = true;
     public static float bootsSpeed;
 

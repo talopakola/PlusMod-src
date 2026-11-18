@@ -41,23 +41,6 @@ public class ItemNugget extends Item {
     }
 
     @Override
-    public boolean onDroppedByPlayer(ItemStack stack, EntityPlayer player) {
-        int meta = stack.getItemDamage();
-        if (meta == 0) {
-            World world = player.worldObj;
-            world.createExplosion(player, player.posX, player.posY, player.posZ, 10F, false);
-            player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "" + EnumChatFormatting.ITALIC + StatCollector.translateToLocal("chat.en.desc")));
-            // This was needed? No,
-            // this was funny? No,
-            // So why I did that?
-            // BC I'm the famous "Don Comédia", lol.
-
-            return false;
-        }
-        return true;
-    }
-
-    @Override
     public EnumRarity getRarity(ItemStack stack) {
         int meta = stack.getItemDamage();
         switch (meta){

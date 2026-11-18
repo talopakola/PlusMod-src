@@ -1,3 +1,12 @@
+/*
+*
+* At this point this doesn't make sense.
+* I'm continuing this by pure nostalgia. It is a bad mod that I make when I was 12.
+* I don't know. I'll continue this until I gave up.
+* 01:53, 09/18/2026.
+*
+* */
+
 package net.enzo.plus;
 
 import cpw.mods.fml.common.Mod;

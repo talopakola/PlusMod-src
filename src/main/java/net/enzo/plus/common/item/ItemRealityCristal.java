@@ -26,7 +26,7 @@ public class ItemRealityCristal extends Item {
         return InfinityItems.infinity;
     }
 
-    @SuppressWarnings({"unchecked", "rawtypes"})  // WHY INTELLIJ?
+    @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List tooltip, boolean idk) {
         tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + InfinityText.rainbow(StatCollector.translateToLocal("tooltip.reality.desc")));

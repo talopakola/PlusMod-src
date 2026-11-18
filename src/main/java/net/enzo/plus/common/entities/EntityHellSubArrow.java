@@ -5,7 +5,6 @@ import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.world.World;
 
 public class EntityHellSubArrow extends EntityArrow {
-    //HDUIDGSUIAYDGSAIYGDSAUYDGSAUYDGAs
     public EntityHellSubArrow(World world, double x,	double y, double z) {
         super(world, x, y, z);
     }

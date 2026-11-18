@@ -30,7 +30,6 @@ public class ItemStarIngot extends Item {
         tooltip.add(EnumChatFormatting.DARK_GRAY + "" +EnumChatFormatting.ITALIC + StatCollector.translateToLocal("tooltip.star.desc"));
     }
 
-    // Cool random function
     @Override
     public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
         return true;

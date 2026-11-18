@@ -13,7 +13,7 @@ public class InfinityBlocks {
     public static Block star;
     public static Block reality;
     public static Block coke;
-    public static Block comp;
+    //public static Block comp;
 
     public static void consumeUniverse() {
         absolute = GameRegistry.registerBlock(new BlockAbsoluteCraftingTable(), "absolute_craft");
